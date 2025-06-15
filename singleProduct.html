@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbow Global</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- responsiveness -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+</head>
+
+<body>
+    <!-- ======= HEADER START ======= -->
+    <!-- Topbar -->
+    <div class="topbar py-2 border-bottom bg-light">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+                <!-- Left Side - Contact Numbers -->
+                <div class="d-flex flex-wrap gap-3 mb-2 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-2 text-primary"></i>
+                        <span class="text-muted">Customer Service: <a href="tel:01960473828"
+                                class="text-decoration-none">01960473828</a></span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-headset me-2 text-primary"></i>
+                        <span class="text-muted">Dealer Support: <a href="tel:01907109181"
+                                class="text-decoration-none">01907109181</a></span>
+                    </div>
+                </div>
+
+                <!-- Right Side - Social Links -->
+                <div class="d-flex gap-3 align-items-center">
+                    <a href="#" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Menu Start -->
+    <header>
+        <div class="container">
+            <div class="top-bar">
+                <div class="left">
+                    <div class="menu-toggle" onclick="toggleMobileNav()">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                                style="height: 25px;">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <select>
+                            <option value="">All</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                        </select>
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="icon">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                            <span>15</span> </a>
+                    </div>
+                    <div class="icon user" id="userIcon">
+                        <i class="fas fa-user"></i>
+                        <div class="dropdown">
+                            <a href="login.html">Login</a>
+                            <a href="sign-up.html">Register</a>
+                            <a href="memberLogin.html">Member Login</a>
+                            <a href="memberRegister.html">Member Register</a>
+                            <a href="dashboard.html">Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile sticky bar menu -->
+                <div class="mobile-sticky-bar-menu">
+                    <div class="menu-toggle" onclick="toggleMobileNav()">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="logo">
+                        <a href="#">
+                            <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                                style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="user-cart-icons d-flex align-items-center gap-3">
+                        <div class="icon">
+                            <i class="fas fa-bag-shopping"></i>
+                            <span>15</span>
+                            <div class="dropdown">
+                                <p>View Cart</p>
+                            </div>
+                        </div>
+                        <div class="icon user" id="userIcon2">
+                            <i class="fas fa-user"></i>
+                            <div class="dropdown">
+                                <a href="login.html">Login</a>
+                                <a href="sign-up.html">Register</a>
+                                <a href="memberLogin.html">Member Login</a>
+                                <a href="memberRegister.html">Member Register</a>
+                                <a href="dashboard.html">Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-menu-items">
+            <div class="container">
+                <div class="nav-bar">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop</a>
+                        <!-- <div class="has-dropdown">
+                            <a href="#">Shop <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <a href="shop.html">Shop Page</a>
+                                <a href="#">Product Details</a>
+                            </div>
+                        </div>  -->
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                    <div class="nav-actions">
+                        <a href="#" class="seller-btn">Get Offers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-close" onclick="toggleMobileNav()">×</div>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#">Product Details</a>
+        <a href="#">Cart</a>
+        <a href="#">Checkout</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="seller-btn" style="margin-top:20px;">Become a Seller</a>
+    </div>
+
+
+
+
+
+    <!-- ======= HEADER END ======= -->
+
+    <!-- ======= MAIN CONTENT START ======= -->
+    <main>
+        <!-- single product detail content start -->
+        <section class="single-product-details">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Single Product</li>
+                    </ol>
+                </nav>
+
+                <div class="row mt-4">
+                    <div class="col-lg-6 mb-4">
+                        <!-- Main Product Image -->
+                        <div class="bg-white p-4 rounded shadow-sm mb-3"
+                            style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                            <img id="mainProductImage" src="assets/images/top-selling/product-img-4.jpg"
+                                alt="Samsung Galaxy Z Fold3 5G" class="img-fluid"
+                                style="max-height: 100%; object-fit: contain; cursor: zoom-in;">
+                        </div>
+
+                        <!-- Thumbnail Gallery -->
+                        <div class="thumbnail-gallery d-flex justify-content-start gap-2">
+                            <div class="thumbnail-item border p-2 rounded"
+                                style="width: 80px; height: 80px; cursor: pointer;">
+                                <img src="assets/images/top-selling/product-img-4.jpg" alt="Thumbnail 1"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    onclick="changeMainImage('assets/images/top-selling/product-img-4.jpg')">
+                            </div>
+                            <div class="thumbnail-item border p-2 rounded"
+                                style="width: 80px; height: 80px; cursor: pointer;">
+                                <img src="assets/images/top-selling/product-img-5.jpg" alt="Thumbnail 2"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    onclick="changeMainImage('assets/images/top-selling/product-img-5.jpg')">
+                            </div>
+                            <div class="thumbnail-item border p-2 rounded"
+                                style="width: 80px; height: 80px; cursor: pointer;">
+                                <img src="assets/images/top-selling/product-img-6.jpg" alt="Thumbnail 3"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    onclick="changeMainImage('assets/images/top-selling/product-img-6.jpg')">
+                            </div>
+                            <div class="thumbnail-item border p-2 rounded active"
+                                style="width: 80px; height: 80px; cursor: pointer;">
+                                <img src="assets/images/top-selling/product-img-4.jpg" alt="Thumbnail 4"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    onclick="changeMainImage('assets/images/top-selling/product-img-4.jpg')">
+                            </div>
+                            <div class="thumbnail-item border p-2 rounded"
+                                style="width: 80px; height: 80px; cursor: pointer;">
+                                <img src="assets/images/top-selling/product-img-5.jpg" alt="Thumbnail 5"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    onclick="changeMainImage('assets/images/top-selling/product-img-5.jpg')">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <p class="product-category">MOBILE PHONES</p>
+                        <h1 class="product-title">Samsung Galaxy Z Fold3 5G</h1>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="ms-2 text-black"> 6 <span class="text-muted">Reviews</span> </span>
+                        </div>
+
+                        <div class="price">
+                            <span class="current-price">$99</span>
+                            <span class="original-price">$6.99</span>
+                        </div>
+
+                        <p class="product-description">
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout.
+                        </p>
+
+                        <div class="product-options">
+                            <div class="option-group">
+                                <p class="option-title">COLOR</p>
+                                <div class="color-options">
+                                    <div class="color-option selected" style="background-color: #000000;"
+                                        data-color="black"></div>
+                                    <div class="color-option" style="background-color: #2563eb;" data-color="blue">
+                                    </div>
+                                    <div class="color-option" style="background-color: #6b7280;" data-color="gray">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="option-group mb-4">
+                                <p class="option-title fw-bold mb-2">SELECT SIZE</p>
+                                <div class="size-options d-flex flex-wrap gap-2 mb-2">
+                                    <div class="size-option position-relative selected" data-size="small">
+                                        <input type="radio" name="size" id="size-small" value="small"
+                                            class="position-absolute opacity-0">
+                                        <label for="size-small"
+                                            class="d-block px-3 py-2 border rounded-2 cursor-pointer">
+                                            Small
+                                            <span class="size-dimensions d-block text-muted fs-12 mt-1">YW-2'D
+                                                x7'H</span>
+                                        </label>
+                                    </div>
+                                    <div class="size-option position-relative" data-size="medium">
+                                        <input type="radio" name="size" id="size-medium" value="medium"
+                                            class="position-absolute opacity-0">
+                                        <label for="size-medium"
+                                            class="d-block px-3 py-2 border rounded-2 cursor-pointer">
+                                            Medium
+                                            <span class="size-dimensions d-block text-muted fs-12 mt-1">YW-3'D
+                                                x8'H</span>
+                                        </label>
+                                    </div>
+                                    <div class="size-option position-relative" data-size="large">
+                                        <input type="radio" name="size" id="size-large" value="large"
+                                            class="position-absolute opacity-0">
+                                        <label for="size-large"
+                                            class="d-block px-3 py-2 border rounded-2 cursor-pointer">
+                                            Large
+                                            <span class="size-dimensions d-block text-muted fs-12 mt-1">YW-4'D
+                                                x9'H</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- <small class="text-muted d-block">Select your preferred size</small>
+                                <a href="#" class="size-guide-link text-decoration-none d-inline-block mt-2">Size Guide
+                                    <i class="fas fa-ruler ms-1"></i></a> -->
+                            </div>
+
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="quantity-input" value="1" min="1">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+
+                                <a href="#" class="rainbow-btn btn-buy mt-auto ms-2">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Category:</span>
+                                <span class="meta-value">Kitchen</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Tags:</span>
+                                <span class="meta-value">Boot, Partner</span>
+                            </div>
+                        </div>
+
+                        <div class="action-links">
+                            <a href="#" class="action-link"><i class="fas fa-flag me-1"></i> Report This Item</a>
+
+                        </div>
+                        <!-- share product -->
+                        <div class="share-product-container mt-4">
+                            <div class="share-product-link d-flex align-items-center mb-3">
+                                <a href="#" class="action-link text-decoration-none d-flex align-items-center me-3">
+                                    <i class="fas fa-share-alt me-2"></i>
+                                    <span>Share This Product</span>
+                                </a>
+                                <div class="social-share-icons d-flex gap-2">
+                                    <a href="#" class="social-icon facebook" title="Share on Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-icon twitter" title="Share on Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon pinterest" title="Share on Pinterest">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+                                    <a href="#" class="social-icon whatsapp" title="Share via WhatsApp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="social-icon link" title="Copy link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Descriptions -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-tabs">
+                            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
+                                        data-bs-target="#description" type="button" role="tab"
+                                        aria-controls="description" aria-selected="true">Description</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab"
+                                        data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews"
+                                        aria-selected="false">Reviews (3)</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="productTabsContent">
+                                <!-- Description Tab -->
+                                <div class="tab-pane fade show active description-content" id="description"
+                                    role="tabpanel" aria-labelledby="description-tab">
+                                    <h2>Description</h2>
+
+                                    <h3>Introduction</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries but also the on leap into
+                                        electronic typesetting, remaining essentially unchanged. It wasn't popularised
+                                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                                        passages, and more recently with desktop publishing software like Aldus
+                                        PageMaker including versions of Lorem Ipsum to make a type specimen book.</p>
+
+                                    <h3>Features</h3>
+                                    <ul class="features-list">
+                                        <li>slim body with metal cover</li>
+                                        <li>latest Intel Core i5-T135G7 processor (4 cores / 8 threads)</li>
+                                        <li>8GB DDR4 RAM and fast 512GB PCIe SSD</li>
+                                        <li>NVIDIA GeForce MX350 2GB GDDR5 graphics card backlit keyboard, touchpad with
+                                            gesture support</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Reviews Tab -->
+                                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                                    <div class="review-item">
+                                        <div class="reviewer-info">
+                                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                                alt="Sarah Johnson" class="reviewer-avatar">
+                                            <div>
+                                                <div class="reviewer-name">Sarah Johnson</div>
+                                                <div class="review-date">March 15, 2023</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="review-text">
+                                            This product exceeded my expectations! The build quality is excellent and
+                                            performance is outstanding for the price. I would definitely recommend this
+                                            to anyone looking for a reliable device.
+                                        </div>
+                                    </div>
+
+                                    <div class="review-item">
+                                        <div class="reviewer-info">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
+                                                class="reviewer-avatar">
+                                            <div>
+                                                <div class="reviewer-name">Michael Chen</div>
+                                                <div class="review-date">February 28, 2023</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <div class="review-text">
+                                            Good product overall, but the battery life could be better. The design is
+                                            sleek and the performance is solid for everyday tasks. The keyboard is
+                                            comfortable to type on.
+                                        </div>
+                                    </div>
+
+                                    <div class="review-item">
+                                        <div class="reviewer-info">
+                                            <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                                alt="Emily Rodriguez" class="reviewer-avatar">
+                                            <div>
+                                                <div class="reviewer-name">Emily Rodriguez</div>
+                                                <div class="review-date">January 10, 2023</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <div class="review-text">
+                                            Very happy with my purchase. The device is lightweight yet powerful enough
+                                            for my graphic design work. The screen quality is excellent and colors are
+                                            vibrant.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Products -->
+                <div class="related-products py-3">
+                    <div class="section-title text-start">
+                        <h2>Related Products</h2>
+                    </div>
+                    <!-- products row -->
+                    <div class="row g-4">
+                        <!-- Product Card Start -->
+                        <!-- Product Card 1 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+                            <div class="card product-card h-100">
+                                <img src="assets/images/pro-1.avif" class="card-img-top product-img"
+                                    alt="Wireless Headphones" />
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="product-name">Wireless Headphones</h5>
+                                    <p class="text-muted">Crystal-clear sound & deep bass. Crystal-clear sound & deep
+                                        bass.</p>
+                                    <p class="product-price">$79.99</p>
+                                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                        <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card product-card h-100">
+                                <img src="assets/images/pro-1.avif" class="card-img-top product-img"
+                                    alt="Smart Watch" />
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="product-name">Smart Watch</h5>
+                                    <p class="text-muted">
+                                        Track fitness & notifications on the go.
+                                    </p>
+                                    <p class="product-price">$59.99</p>
+                                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                        <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card product-card h-100">
+                                <img src="assets/images/pro-1.avif" class="card-img-top product-img"
+                                    alt="Running Shoes" />
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="product-name">Running Shoes</h5>
+                                    <p class="text-muted">Comfort & performance in every step.</p>
+                                    <p class="product-price">$49.99</p>
+                                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                        <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card product-card h-100">
+                                <img src="assets/images/pro-1.avif" class="card-img-top product-img" alt="Backpack" />
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="product-name">Stylish Backpack</h5>
+                                    <p class="text-muted">Perfect for travel or daily use.</p>
+                                    <p class="product-price">$39.99</p>
+                                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                        <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product Card End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ======= MAIN CONTENT END ======= -->
+
+    <!-- ======= FOOTER START ======= -->
+    <!-- Footer Section -->
+    <footer class="footer-section pt-5">
+        <div class="footer-logo-area">
+            <div class="container">
+                <div class="row d-flex align-items-center py-4">
+                    <div class="col-md-6">
+                        <div class="footer-logo text-start">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo-main.png" alt="Luminous Logo" class="img-fluid"
+                                    style="height: 80px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="social-icons">
+                            <a href="#" class=" me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row-content">
+            <div class="container">
+                <div class="row">
+                    <!-- Company Info -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+                        <div class="footer-left-content">
+                            <h3 class="footer-contact-heading text-uppercase mb-4">Business Contact</h3>
+                            <div class="business-contact">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-map-marker-alt me-2" style="color: #47ffb3;"></i>
+                                        123 Yarran St, Punchbowl, NSW 2196, Australia
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-phone-alt me-2" style="color: #4795ff;"></i>
+                                        (64) 8342 1245
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-envelope me-2" style="color: #ffb347;"></i>
+                                        support@rainbowglobal.com
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-sm btn-outline-light">
+                                    <i class="fas fa-directions me-1"></i> Get direction
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Newsletter -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+                        <div class="footer-middle-content">
+                            <h5 class="text-uppercase mb-4">Subscribe Newsletter</h5>
+                            <p class="small">We invite you to register to read the latest news, offers and events about
+                                our company.
+                                We
+                                promise not to spam your inbox.</p>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control form-control-sm"
+                                    placeholder="Enter your e-mail..." aria-label="Email">
+                                <button class="btn btn-sm text-white" type="button"
+                                    style="background: linear-gradient(45deg, #ff6b9d, #ffb347);">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start">
+                        <div class="footer-right-content">
+                            <div class="row">
+                                <!-- About Us -->
+                                <div class="col-md-6">
+                                    <h5 class="text-uppercase mb-4">About Us</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">About Us</a></li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Our Store</a></li>
+                                        <li><a href="#" class="text-decoration-none">Our Story</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Resources -->
+                                <div class="col-md-6">
+                                    <h5 class="text-uppercase mb-4">Resources</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Privacy Policies</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Terms & Conditions</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Returns & Refunds</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">FAQ's</a></li>
+                                        <li><a href="#" class="text-decoration-none">Shipping</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-1" style="border-color: rgba(255,255,255,0.1);">
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-start">
+                    <p class="small mb-0">Copyright &copy; 2025 by Rainbow Global. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="small mb-0">Developed By <a href="#" class="developed-link" target="_blank">Freelance
+                            IT</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ======= FOOTER END ======= -->
+
+    <!-- Bootstrap JS & Custom JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Mobile Responsive js -->
+    <script src="js/mobileResponsive.js"></script>
+
+    <!-- Font awesome js -->
+    <script src="js/all.min.js"></script>
+
+    <!-- Hero Slider JS -->
+    <script src="js/heroSlider.js"></script>
+
+    <!-- Single Product Details Js -->
+    <script src="js/singleProduct.js"></script>
+    <script src="js/singlProductImage.js"></script>
+    <script src="js/singleProductSelect.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>

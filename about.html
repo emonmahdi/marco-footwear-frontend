@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbow Global</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- responsiveness -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+</head>
+
+<body>
+    <!-- ======= HEADER START ======= -->
+    <!-- Topbar -->
+    <div class="topbar py-2 border-bottom bg-light">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+                <!-- Left Side - Contact Numbers -->
+                <div class="d-flex flex-wrap gap-3 mb-2 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-2 text-primary"></i>
+                        <span class="text-muted">Customer Service: <a href="tel:01960473828"
+                                class="text-decoration-none">01960473828</a></span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-headset me-2 text-primary"></i>
+                        <span class="text-muted">Dealer Support: <a href="tel:01907109181"
+                                class="text-decoration-none">01907109181</a></span>
+                    </div>
+                </div>
+
+                <!-- Right Side - Social Links -->
+                <div class="d-flex gap-3 align-items-center">
+                    <a href="#" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Menu Start -->
+    <header>
+        <div class="container">
+            <div class="top-bar">
+                <div class="left">
+                    <div class="menu-toggle" onclick="toggleMobileNav()">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                                style="height: 25px;">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <select>
+                            <option value="">All</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                        </select>
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="icon">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                            <span>15</span> </a>
+                    </div>
+                    <div class="icon user" id="userIcon">
+                        <i class="fas fa-user"></i>
+                        <div class="dropdown">
+                            <a href="login.html">Login</a>
+                            <a href="sign-up.html">Register</a>
+                            <a href="memberLogin.html">Member Login</a>
+                            <a href="memberRegister.html">Member Register</a>
+                            <a href="dashboard.html">Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile sticky bar menu -->
+                <div class="mobile-sticky-bar-menu">
+                    <div class="menu-toggle" onclick="toggleMobileNav()">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="logo">
+                        <a href="#">
+                            <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                                style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="user-cart-icons d-flex align-items-center gap-3">
+                        <div class="icon">
+                            <i class="fas fa-bag-shopping"></i>
+                            <span>15</span>
+                            <div class="dropdown">
+                                <p>View Cart</p>
+                            </div>
+                        </div>
+                        <div class="icon user" id="userIcon2">
+                            <i class="fas fa-user"></i>
+                            <div class="dropdown">
+                                <a href="login.html">Login</a>
+                                <a href="sign-up.html">Register</a>
+                                <a href="memberLogin.html">Member Login</a>
+                                <a href="memberRegister.html">Member Register</a>
+                                <a href="dashboard.html">Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-menu-items">
+            <div class="container">
+                <div class="nav-bar">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop</a>
+                        <!-- <div class="has-dropdown">
+                            <a href="#">Shop <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <a href="shop.html">Shop Page</a>
+                                <a href="#">Product Details</a>
+                            </div>
+                        </div> -->
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                    <div class="nav-actions">
+                        <a href="#" class="seller-btn">Get Offers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-close" onclick="toggleMobileNav()">×</div>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#">Product Details</a>
+        <a href="#">Cart</a>
+        <a href="#">Checkout</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="seller-btn" style="margin-top:20px;">Become a Seller</a>
+    </div>
+
+
+
+
+
+    <!-- ======= HEADER END ======= -->
+
+    <!-- ======= MAIN CONTENT START ======= -->
+    <main>
+        <!-- About Content -->
+        <section class="about-ritaxes py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Column - Text Content -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="pe-lg-5">
+                            <h6 class="text-uppercase mb-3">ABOUT Rainbow Global</h6>
+                            <h2 class="display-5 fw-bold mb-4">Innovative Strategies <br>for Tax Prosperity</h2>
+                            <p class="lead mb-4">Duis et dolor vel neque faucibus tincidunt. Nulla semper condimentum
+                                tellus in ultricies. Nunc tempor ipsum nec fermentum consequat. Cras et felis ultricies,
+                                molestie dolor sit amet, condimentum ante.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled mb-4 mb-md-0">
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <span class="me-2 text-primary">✓</span>
+                                            <span>Curabitur gravida sem</span>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <span class="me-2 text-primary">✓</span>
+                                            <span>Mauris tempor ac erat</span>
+                                        </li>
+                                        <li class="d-flex align-items-start">
+                                            <span class="me-2 text-primary">✓</span>
+                                            <span>Fusce eleifend lectus</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <span class="me-2 text-primary">✓</span>
+                                            <span>Fusce non sodales dui</span>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start">
+                                            <span class="me-2 text-primary">✓</span>
+                                            <span>Class aptent taciti</span>
+                                        </li>
+                                        <li class="d-flex align-items-start">
+                                            <span class="me-2 text-primary">✓</span>
+                                            <span>Nam elementum semper</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Experience Badge -->
+                    <div class="col-lg-6">
+                        <div class="experience-badge bg-light p-5 rounded text-center position-relative"
+                            style="max-width: 300px; margin: 0 auto;">
+                            <div class="position-absolute top-0 start-50 translate-middle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 80px; height: 80px; transform: translateY(-50%);">
+                                <span class="fw-bold fs-4">25+</span>
+                            </div>
+                            <h3 class="mt-5 mb-3 fw-bold">Years of Experience</h3>
+                            <a href="#" class="btn btn-outline-primary px-4">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials section start -->
+        <section id="testimonials-section" class="testimonials-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Cleints Feedback</h2>
+                </div>
+                <div class="swiper testimonial-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="single-testimonial">
+                                <div class="reviews">
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </div>
+                                <p>
+                                    “Amazing support and lightning‑fast delivery. I went from zero
+                                    to hero in just a week!”
+                                </p>
+                                <div class="testimonial-footer">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" />
+                                    <div>
+                                        <h4>John Doe</h4>
+                                        <p>Web Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="single-testimonial">
+                                <div class="reviews">
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                </div>
+                                <p>
+                                    “Great course experience, really helpful instructors! I
+                                    finally understand async JavaScript.”
+                                </p>
+                                <div class="testimonial-footer">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Jane Smith" />
+                                    <div>
+                                        <h4>Jane Smith</h4>
+                                        <p>UI Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="single-testimonial">
+                                <div class="reviews">
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                </div>
+                                <p>
+                                    “Excellent community and super‑practical content. Loved the
+                                    real‑life projects.”
+                                </p>
+                                <div class="testimonial-footer">
+                                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Ali Rahman" />
+                                    <div>
+                                        <h4>Ali Rahman</h4>
+                                        <p>Digital Marketer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="single-testimonial">
+                                <div class="reviews">
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i><i
+                                        class="fa-regular fa-star text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                </div>
+                                <p>
+                                    “Good starting point for beginners. Would recommend the JS
+                                    path.”
+                                </p>
+                                <div class="testimonial-footer">
+                                    <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Sara Khan" />
+                                    <div>
+                                        <h4>Sara Khan</h4>
+                                        <p>Student</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- …add more slides if you like… -->
+                    </div>
+
+                    <!-- pagination bullets -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials section end -->
+
+    </main>
+    <!-- ======= MAIN CONTENT END ======= -->
+
+    <!-- ======= FOOTER START ======= -->
+    <!-- Footer Section -->
+    <footer class="footer-section pt-5">
+        <div class="footer-logo-area">
+            <div class="container">
+                <div class="row d-flex align-items-center py-4">
+                    <div class="col-md-6">
+                        <div class="footer-logo text-start">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo-main.png" alt="Luminous Logo" class="img-fluid"
+                                    style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="social-icons">
+                            <a href="#" class=" me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row-content">
+            <div class="container">
+                <div class="row">
+                    <!-- Company Info -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+                        <div class="footer-left-content">
+                            <h3 class="footer-contact-heading text-uppercase mb-4">Business Contact</h3>
+                            <div class="business-contact">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-map-marker-alt me-2" style="color: #47ffb3;"></i>
+                                        123 Yarran St, Punchbowl, NSW 2196, Australia
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-phone-alt me-2" style="color: #4795ff;"></i>
+                                        (64) 8342 1245
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-envelope me-2" style="color: #ffb347;"></i>
+                                        support@rainbowglobal.com
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-sm btn-outline-light">
+                                    <i class="fas fa-directions me-1"></i> Get direction
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Newsletter -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+                        <div class="footer-middle-content">
+                            <h5 class="text-uppercase mb-4">Subscribe Newsletter</h5>
+                            <p class="small">We invite you to register to read the latest news, offers and events about
+                                our company.
+                                We
+                                promise not to spam your inbox.</p>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control form-control-sm"
+                                    placeholder="Enter your e-mail..." aria-label="Email">
+                                <button class="btn btn-sm text-white" type="button"
+                                    style="background: linear-gradient(45deg, #ff6b9d, #ffb347);">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start">
+                        <div class="footer-right-content">
+                            <div class="row">
+                                <!-- About Us -->
+                                <div class="col-md-6">
+                                    <h5 class="text-uppercase mb-4">About Us</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">About Us</a></li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Our Store</a></li>
+                                        <li><a href="#" class="text-decoration-none">Our Story</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Resources -->
+                                <div class="col-md-6">
+                                    <h5 class="text-uppercase mb-4">Resources</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Privacy Policies</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Terms & Conditions</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Returns & Refunds</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">FAQ's</a></li>
+                                        <li><a href="#" class="text-decoration-none">Shipping</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-1" style="border-color: rgba(255,255,255,0.1);">
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-start">
+                    <p class="small mb-0">Copyright &copy; 2025 by Rainbow Global. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="small mb-0">Developed By <a href="#" class="developed-link" target="_blank">Freelance
+                            IT</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ======= FOOTER END ======= -->
+
+    <!-- Bootstrap JS & Custom JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Mobile Responsive js -->
+    <script src="js/mobileResponsive.js"></script>
+
+    <!-- Font awesome js -->
+    <script src="js/all.min.js"></script>
+
+    <!-- Testimonial Js -->
+    <script src="js/testimonial.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const swiper = new Swiper(".testimonial-slider", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                reverseDirection: true, // right ➜ left
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+            },
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbow Global</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- responsiveness -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+</head>
+
+<body>
+    <!-- ======= HEADER START ======= -->
+    <!-- Topbar -->
+    <div class="topbar py-2 border-bottom bg-light">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+                <!-- Left Side - Contact Numbers -->
+                <div class="d-flex flex-wrap gap-3 mb-2 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-2 text-primary"></i>
+                        <span class="text-muted">Customer Service: <a href="tel:01960473828"
+                                class="text-decoration-none">01960473828</a></span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-headset me-2 text-primary"></i>
+                        <span class="text-muted">Dealer Support: <a href="tel:01907109181"
+                                class="text-decoration-none">01907109181</a></span>
+                    </div>
+                </div>
+
+                <!-- Right Side - Social Links -->
+                <div class="d-flex gap-3 align-items-center">
+                    <a href="#" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Menu Start -->
+    <header>
+        <div class="container">
+            <div class="top-bar">
+                <div class="left">
+                    <div class="menu-toggle" onclick="toggleMobileNav()">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                                style="height: 25px;">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <select>
+                            <option value="">All</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                        </select>
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="icon">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                            <span>15</span> </a>
+                    </div>
+                    <div class="icon user" id="userIcon">
+                        <i class="fas fa-user"></i>
+                        <div class="dropdown">
+                            <a href="login.html">Login</a>
+                            <a href="sign-up.html">Register</a>
+                            <a href="memberLogin.html">Member Login</a>
+                            <a href="memberRegister.html">Member Register</a>
+                            <a href="dashboard.html">Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile sticky bar menu -->
+                <div class="mobile-sticky-bar-menu">
+                    <div class="menu-toggle" onclick="toggleMobileNav()">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="logo">
+                        <a href="#">
+                            <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                                style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="user-cart-icons d-flex align-items-center gap-3">
+                        <div class="icon">
+                            <i class="fas fa-bag-shopping"></i>
+                            <span>15</span>
+                            <div class="dropdown">
+                                <p>View Cart</p>
+                            </div>
+                        </div>
+                        <div class="icon user" id="userIcon2">
+                            <i class="fas fa-user"></i>
+                            <div class="dropdown">
+                                <a href="login.html">Login</a>
+                                <a href="sign-up.html">Register</a>
+                                <a href="memberLogin.html">Member Login</a>
+                                <a href="memberRegister.html">Member Register</a>
+                                <a href="dashboard.html">Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-menu-items">
+            <div class="container">
+                <div class="nav-bar">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop</a>
+                        <!-- <div class="has-dropdown">
+                            <a href="#">Shop <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <a href="shop.html">Shop Page</a>
+                                <a href="#">Product Details</a>
+                            </div>
+                        </div> -->
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                    <div class="nav-actions">
+                        <a href="#" class="seller-btn">Get Offers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-close" onclick="toggleMobileNav()">×</div>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#">Product Details</a>
+        <a href="#">Cart</a>
+        <a href="#">Checkout</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="seller-btn" style="margin-top:20px;">Become a Seller</a>
+    </div>
+    <!-- filtering content start -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 mb-4">
+                <div class="sidebar">
+                    <div class="filter-title">Filter by Category</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category1">
+                        <label class="form-check-label" for="category1">Vitamins</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category2">
+                        <label class="form-check-label" for="category2">Supplements</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="category3">
+                        <label class="form-check-label" for="category3">Protein</label>
+                    </div>
+
+                    <hr>
+                    <!-- 
+                    <div class="filter-title">Price Range</div>
+                    <div class="d-flex justify-content-between">
+                        <span class="price-value" id="priceMinValue">$10</span>
+                        <span class="price-value" id="priceMaxValue">$100</span>
+                    </div>
+                    <input type="range" class="price-range" min="10" max="100" value="10" id="priceMin">
+                    <input type="range" class="price-range mt-2" min="10" max="100" value="100" id="priceMax"> -->
+
+                    <!-- Price Range Filter -->
+                    <div class="price-range-wrapper">
+                        <div class="filter-title">Price Range</div>
+
+                        <div class="price-values">
+                            <span id="priceMinValue1">$20</span>
+                            <span id="priceMaxValue2">$80</span>
+                        </div>
+
+                        <div class="slider-container">
+                            <div class="slider-track"></div>
+                            <input type="range" min="10" max="100" value="20" id="priceMin" class="range-input">
+                            <input type="range" min="10" max="100" value="80" id="priceMax" class="range-input">
+                        </div>
+                    </div>
+
+
+                    <hr>
+
+                    <div class="filter-title">Filter by Size</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="size" id="sizeS">
+                        <label class="form-check-label" for="sizeS">Small</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="size" id="sizeM">
+                        <label class="form-check-label" for="sizeM">Medium</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="size" id="sizeL">
+                        <label class="form-check-label" for="sizeL">Large</label>
+                    </div>
+
+                    <hr>
+
+                    <div class="filter-title">Brands</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="brand1">
+                        <label class="form-check-label" for="brand1">Rainbow Essentials</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="brand2">
+                        <label class="form-check-label" for="brand2">Healthy Life</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product List -->
+            <div class="col-md-9">
+                <div class="row g-4">
+                    <!-- Product Card Start -->
+                    <!-- Product Card 1 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-1.jpg" class="card-img-top product-img"
+                                alt="Wireless Headphones" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"> <a href="singleProduct.html">Organic Neem Leaf Powder</a></h5>
+                                <p class="text-muted">Skin & Blood Purifier</p>
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-2.jpg" class="card-img-top product-img"
+                                alt="Moringa Leaf Powder" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"><a href="singleProduct.html">Moringa Leaf Powder</a></h5>
+                                <p class="text-muted">
+                                    Superfood for Energy & Immunity
+                                </p>
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-3.jpg" class="card-img-top product-img"
+                                alt="Tulsi Infused Coconut Oil " />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"><a href="singleProduct.html">Tulsi Infused Coconut Oil </a>
+                                </h5>
+                                <p class="text-muted">Immunity & Hair Health</p>
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-4.jpg" class="card-img-top product-img" alt="Backpack" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"><a href="singleProduct.html">Ayurvedic Detox Rice Blend</a>
+                                </h5>
+                                <p class="text-muted">Supports Clean Digestion</p>
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-5.jpg" class="card-img-top product-img"
+                                alt="Turmeric Curcumin Powder" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"><a href="singleProduct.html">Turmeric Curcumin Powder</a></h5>
+                                <p class="text-muted">Anti-Inflammatory Support</p>
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-6.jpg" class="card-img-top product-img"
+                                alt="Multani Mitti Powder" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"><a href="singleProduct.html">Multani Mitti Powder</a></h5>
+                                <p class="text-muted">
+                                    Natural Clay Face Pack
+                                </p>
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-7.jpg" class="card-img-top product-img"
+                                alt="Ayurvedic Pain Relief Oil" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"><a href="singleProduct.html">Ayurvedic Pain Relief Oil</a></h5>
+                                <p class="text-muted">Muscle & Joint Support</p>
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card product-card h-100">
+                            <img src="assets/images/product/p-1.jpg" class="card-img-top product-img" alt="Backpack" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="product-name"><a href="singleProduct.html">Herbal Aloe Vera Shampoo</a></h5>
+                                <p class="text-muted">Soothing & Hydrating</p>
+                                <!-- <p class="">$39.99</p> -->
+                                <div class="product-price">
+                                    <span class="current-price">$14.99</span>
+                                    <span class="original-price">$29.99</span>
+                                    <span class="discount-percent">50% OFF</span>
+                                </div>
+                                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card End -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-center mt-4">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ======= FOOTER START ======= -->
+    <!-- Footer Section -->
+    <footer class="footer-section pt-5">
+        <div class="footer-logo-area">
+            <div class="container">
+                <div class="row d-flex align-items-center py-4">
+                    <div class="col-md-6">
+                        <div class="footer-logo text-start">
+                            <a href="#">
+                                <img src="assets/images/logo//logo-main.png" alt="Luminous Logo" class="img-fluid"
+                                    style="height: 40px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="social-icons">
+                            <a href="#" class=" me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class=" me-2"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row-content">
+            <div class="container">
+                <div class="row">
+                    <!-- Company Info -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+                        <div class="footer-left-content">
+                            <h3 class="footer-contact-heading text-uppercase mb-4">Business Contact</h3>
+                            <div class="business-contact">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-map-marker-alt me-2" style="color: #47ffb3;"></i>
+                                        123 Yarran St, Punchbowl, NSW 2196, Australia
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-phone-alt me-2" style="color: #4795ff;"></i>
+                                        (64) 8342 1245
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-envelope me-2" style="color: #ffb347;"></i>
+                                        support@rainbowglobal.com
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-sm btn-outline-light">
+                                    <i class="fas fa-directions me-1"></i> Get direction
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Newsletter -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+                        <div class="footer-middle-content">
+                            <h5 class="text-uppercase mb-4">Subscribe Newsletter</h5>
+                            <p class="small">We invite you to register to read the latest news, offers and events about
+                                our company.
+                                We
+                                promise not to spam your inbox.</p>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control form-control-sm"
+                                    placeholder="Enter your e-mail..." aria-label="Email">
+                                <button class="btn btn-sm text-white" type="button"
+                                    style="background: linear-gradient(45deg, #ff6b9d, #ffb347);">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start">
+                        <div class="footer-right-content">
+                            <div class="row">
+                                <!-- About Us -->
+                                <div class="col-md-6">
+                                    <h5 class="text-uppercase mb-4">About Us</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">About Us</a></li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Our Store</a></li>
+                                        <li><a href="#" class="text-decoration-none">Our Story</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Resources -->
+                                <div class="col-md-6">
+                                    <h5 class="text-uppercase mb-4">Resources</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Privacy Policies</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Terms & Conditions</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">Returns & Refunds</a>
+                                        </li>
+                                        <li class="mb-1"><a href="#" class="text-decoration-none">FAQ's</a></li>
+                                        <li><a href="#" class="text-decoration-none">Shipping</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-1" style="border-color: rgba(255,255,255,0.1);">
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-start">
+                    <p class="small mb-0">Copyright &copy; 2025 by Rainbow Global. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="small mb-0">Developed By <a href="#" class="developed-link" target="_blank">Freelance
+                            IT</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ======= FOOTER END ======= -->
+
+    <!-- Bootstrap JS & Custom JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Mobile Responsive js -->
+    <script src="js/mobileResponsive.js"></script>
+
+    <!-- Font awesome js -->
+    <script src="js/all.min.js"></script>
+
+    <!-- Hero Slider JS -->
+    <script src="js/heroSlider.js"></script>
+
+    <!-- Hero Slider JS -->
+    <script src="js/logoSlider.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+
+        const priceMin = document.getElementById('priceMin');
+        const priceMax = document.getElementById('priceMax');
+        const priceMinValue = document.getElementById('priceMinValue1');
+        const priceMaxValue = document.getElementById('priceMaxValue2');
+        const minGap = 10;
+
+        function updatePrices(event) {
+            let minVal = parseInt(priceMin.value);
+            let maxVal = parseInt(priceMax.value);
+
+            if (maxVal - minVal < minGap) {
+                if (event.target.id === "priceMin") {
+                    priceMin.value = maxVal - minGap;
+                    minVal = maxVal - minGap;
+                } else {
+                    priceMax.value = minVal + minGap;
+                    maxVal = minVal + minGap;
+                }
+            }
+
+            priceMinValue.textContent = `$${minVal}`;
+            priceMaxValue.textContent = `$${maxVal}`;
+        }
+
+        priceMin.addEventListener('input', updatePrices);
+        priceMax.addEventListener('input', updatePrices);
+
+
+    </script>
+</body>
+
+</html>

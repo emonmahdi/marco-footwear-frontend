@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainbow Global</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- responsiveness -->
+  <link rel="stylesheet" href="css/responsive.css" />
+
+</head>
+
+<body>
+  <!-- ======= HEADER START ======= -->
+  <!-- Topbar -->
+  <div class="topbar py-2 border-bottom bg-light">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+        <!-- Left Side - Contact Numbers -->
+        <div class="d-flex flex-wrap gap-3 mb-2 mb-md-0">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-phone-alt me-2 text-primary"></i>
+            <span class="text-muted">Customer Service: <a href="tel:01960473828"
+                class="text-decoration-none">01960473828</a></span>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="fas fa-headset me-2 text-primary"></i>
+            <span class="text-muted">Dealer Support: <a href="tel:01907109181"
+                class="text-decoration-none">01907109181</a></span>
+          </div>
+        </div>
+
+        <!-- Right Side - Social Links -->
+        <div class="d-flex gap-3 align-items-center">
+          <a href="#" class="social-icon" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Menu Start -->
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <div class="left">
+          <div class="menu-toggle" onclick="toggleMobileNav()">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="logo">
+            <a href="index.html">
+              <!-- <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                style="height: 25px;"> -->
+              Marco Footwear
+            </a>
+          </div>
+        </div>
+
+        <div class="center">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+            <select>
+              <option value="">All</option>
+              <option value="electronics">Electronics</option>
+              <option value="fashion">Fashion</option>
+            </select>
+            <button><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="icon">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+              <span>15</span> </a>
+          </div>
+          <div class="icon user" id="userIcon">
+            <i class="fas fa-user"></i>
+            <div class="dropdown">
+              <a href="login.html">Login</a>
+              <a href="sign-up.html">Register</a>
+              <a href="memberLogin.html">Member Login</a>
+              <a href="memberRegister.html">Member Register</a>
+              <a href="dashboard.html">Dashboard</a>
+            </div>
+          </div>
+        </div>
+        <!-- mobile sticky bar menu -->
+        <div class="mobile-sticky-bar-menu">
+          <div class="menu-toggle" onclick="toggleMobileNav()">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="logo">
+            <a href="#">
+              <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
+                style="height: 50px;">
+            </a>
+          </div>
+          <div class="user-cart-icons d-flex align-items-center gap-3">
+            <div class="icon">
+              <i class="fas fa-bag-shopping"></i>
+              <span>15</span>
+              <div class="dropdown">
+                <p>View Cart</p>
+              </div>
+            </div>
+            <div class="icon user" id="userIcon2">
+              <i class="fas fa-user"></i>
+              <div class="dropdown">
+                <a href="login.html">Login</a>
+                <a href="sign-up.html">Register</a>
+                <a href="memberLogin.html">Member Login</a>
+                <a href="memberRegister.html">Member Register</a>
+                <a href="dashboard.html">Dashboard</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-menu-items">
+      <div class="container">
+        <div class="nav-bar">
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <!-- <div class="has-dropdown">
+              <a href="#">Shop <i class="fa-solid fa-caret-down"></i></a>
+              <div class="dropdown">
+                <a href="shop.html">Shop Page</a>
+                <a href="#">Product Details</a>
+              </div>
+            </div> -->
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="nav-actions">
+            <a href="#" class="seller-btn">Get Offers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-close" onclick="toggleMobileNav()">×</div>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#">Product Details</a>
+    <a href="#">Cart</a>
+    <a href="#">Checkout</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="seller-btn" style="margin-top:20px;">Become a Seller</a>
+  </div>
+
+
+  <!-- Swiper Slider -->
+  <div class="swiper hero-swiper" style="background-color: #f8f9fa;">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide first-slide-bg">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <h1 class="display-5 fw-bold">Explore Fashion & Beauty</h1>
+              <p class="lead">Stylish fashion and premium beauty products curated just for you.</p>
+              <a href="#" class="rainbow-btn mt-3">Shop Collection</a>
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="assets/images/slider/hero-img.png" alt="Fashion Product" class="img-fluid rounded shadow" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide second-slide-bg">
+        <div class="container ">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <h1 class="display-5 fw-bold">Feel Radiant, Be Confident</h1>
+              <p class="lead">Discover skincare and cosmetics that highlight your natural beauty.</p>
+              <a href="#" class="rainbow-btn mt-3">Browse Beauty</a>
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="assets/images/slider/ss-2.avif" alt="Skincare Product" class="img-fluid rounded shadow" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide three-slide-bg">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <h1 class="display-5 fw-bold">Luxury in Every Detail</h1>
+              <p class="lead">Premium fashion accessories that match your lifestyle and elegance.</p>
+              <a href="#" class="rainbow-btn mt-3">Explore Accessories</a>
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="assets/images/slider/ss-3.avif" alt="Accessories" class="img-fluid rounded shadow" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Swiper Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+  <!-- ======= HEADER END ======= -->
+
+  <!-- ======= MAIN CONTENT START ======= -->
+  <main>
+    <!-- =======Supprt Section Start========== -->
+    <section class="support-section">
+      <div class="container">
+        <div class="all-supports">
+          <div class="row">
+            <!-- single support colum -->
+            <div class="col-md-3">
+              <div class="single-support">
+                <div>
+                  <img src="assets/images/support/support-1.png" class="img-fluid" alt="">
+                </div>
+                <div>
+                  <h4>Free Shipping</h4>
+                  <p>Free shipping on all order</p>
+                </div>
+              </div>
+            </div>
+            <!-- single support colum -->
+            <div class="col-md-3">
+              <div class="single-support">
+                <div>
+                  <img src="assets/images/support/support-2.png" class="img-fluid" alt="">
+                </div>
+                <div>
+                  <h4>Support 24/7</h4>
+                  <p>Free shipping on all order</p>
+                </div>
+              </div>
+            </div>
+            <!-- single support colum -->
+            <div class="col-md-3">
+              <div class="single-support">
+                <div>
+                  <img src="assets/images/support/support-3.png" class="img-fluid" alt="">
+                </div>
+                <div>
+                  <h4>Money Return</h4>
+                  <p>Free shipping on all order</p>
+                </div>
+              </div>
+            </div>
+            <!-- single support colum -->
+            <div class="col-md-3">
+              <div class="single-support">
+                <div>
+                  <img src="assets/images/support/support-4.png" class="img-fluid" alt="">
+                </div>
+                <div>
+                  <h4>Order Discount</h4>
+                  <p>Free shipping on all order</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========Categories Section Start=============== -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Categories</h2>
+        </div>
+        <div class="all-categories-row">
+          <div class="row">
+            <!-- single colum category -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <div class="single-category">
+                <img src="assets/images/categories/product-1.jpg" class="img-fluid" alt="category_1_img">
+                <h4><a href="#">Cleaners</a></h4>
+              </div>
+            </div>
+            <!-- single colum category -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <div class="single-category">
+                <img src="assets/images/categories/product-2.jpg" class="img-fluid" alt="category_1_img">
+                <h4><a href="#">Moisturizers</a></h4>
+              </div>
+            </div>
+            <!-- single colum category -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <div class="single-category">
+                <img src="assets/images/categories/product-3.jpg" class="img-fluid" alt="category_1_img">
+                <h4><a href="#">Serums & Treatments</a></h4>
+              </div>
+            </div>
+            <!-- single colum category -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <div class="single-category">
+                <img src="assets/images/categories/product-4.jpg" class="img-fluid" alt="category_1_img">
+                <h4><a href="#">Body & Face Masks</a></h4>
+              </div>
+            </div>
+            <!-- single colum category -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <div class="single-category">
+                <img src="assets/images/categories/product-5.jpg" class="img-fluid" alt="category_1_img">
+                <h4><a href="#">Body Lotions</a></h4>
+              </div>
+            </div>
+            <!-- single colum category -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <div class="single-category">
+                <img src="assets/images/categories/product-6.jpg" class="img-fluid" alt="category_1_img">
+                <h4><a href="#">Sun Care & Tanning</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========Quality Product Section Start ============= -->
+    <section class="quality-product-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Quality Products</h2>
+        </div>
+        <div class="row g-4">
+          <!-- Product Card Start -->
+          <!-- Product Card 1 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-8.jfif" class="card-img-top product-img" alt="Wireless Headphones" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"> <a href="singleProduct.html">Organic Neem Leaf Powder</a></h5>
+                <p class="text-muted">Skin & Blood Purifier</p>
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-9.jfif" class="card-img-top product-img" alt="Moringa Leaf Powder" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"><a href="singleProduct.html">Moringa Leaf Powder</a></h5>
+                <p class="text-muted">
+                  Superfood for Energy & Immunity
+                </p>
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-11.jfif" class="card-img-top product-img"
+                alt="Tulsi Infused Coconut Oil " />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"><a href="singleProduct.html">Tulsi Infused Coconut Oil </a></h5>
+                <p class="text-muted">Immunity & Hair Health</p>
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-12.jfif" class="card-img-top product-img" alt="Backpack" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"><a href="singleProduct.html">Ayurvedic Detox Rice Blend</a></h5>
+                <p class="text-muted">Supports Clean Digestion</p>
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 1 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-13.jfif" class="card-img-top product-img"
+                alt="Turmeric Curcumin Powder" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"><a href="singleProduct.html">Turmeric Curcumin Powder</a></h5>
+                <p class="text-muted">Anti-Inflammatory Support</p>
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-14.jfif" class="card-img-top product-img" alt="Multani Mitti Powder" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"><a href="singleProduct.html">Multani Mitti Powder</a></h5>
+                <p class="text-muted">
+                  Natural Clay Face Pack
+                </p>
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-15.jfif" class="card-img-top product-img"
+                alt="Ayurvedic Pain Relief Oil" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"><a href="singleProduct.html">Ayurvedic Pain Relief Oil</a></h5>
+                <p class="text-muted">Muscle & Joint Support</p>
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card product-card h-100">
+              <img src="assets/images/product/p-16.jfif" class="card-img-top product-img" alt="Backpack" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="product-name"><a href="singleProduct.html">Herbal Aloe Vera Shampoo</a></h5>
+                <p class="text-muted">Soothing & Hydrating</p>
+                <!-- <p class="">$39.99</p> -->
+                <div class="product-price">
+                  <span class="current-price">$14.99</span>
+                  <span class="original-price">$29.99</span>
+                  <span class="discount-percent">50% OFF</span>
+                </div>
+                <a href="#" class="rainbow-btn btn-buy mt-auto">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card End -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Section Start -->
+    <section id="featured-logo-section">
+      <div class="container">
+        <div class="row align-items-center featured-section">
+          <div class="col-md-2 d-flex align-items-center">
+            <h3 class="featured-title">Featured In</h3>
+          </div>
+          <div class="col-md-10">
+            <div class="featured-logo-wrapper overflow-hidden">
+              <div class="featured-logo-track d-flex" id="logoTrack">
+                <img src="assets/images/features/logo1.png" class="img-fluid logo-item" alt="" />
+                <img src="assets/images/features/logo2.png" class="img-fluid logo-item" alt="" />
+                <img src="assets/images/features/logo3.png" class="img-fluid logo-item" alt="" />
+                <img src="assets/images/features/logo4.png" class="img-fluid logo-item" alt="" />
+                <img src="assets/images/features/logo5.png" class="img-fluid logo-item" alt="" />
+                <img src="assets/images/features/logo3.png" class="img-fluid logo-item" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Section End -->
+    <!-- Subscribe Section start -->
+    <section class="subscribe-section">
+      <div class="container">
+        <h2 class="subscribe-title">Get <span>20%</span> Off Discount Coupon</h2>
+        <p class="subscribe-subtitle">by Subscribe our Newsletter</p>
+
+        <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+          <div class="input-group subscribe-input-group">
+            <span class="input-group-text bg-white"><i class="fas fa-envelope"></i></span>
+            <input type="email" class="form-control" placeholder="EMAIL ADDRESS" required />
+            <button class="btn" type="submit">Get the Coupon</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Top Selling Product -->
+    <section class="top-selling-product">
+      <div class="container">
+        <div class="section-title">
+          <h2>Top Selling Product</h2>
+        </div>
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <div class="single-top-selling shadow p-4 h-100">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="top-selling-img mb-3 text-center">
+                    <img src="assets/images/product/p-11.jfif" class="img-fluid rounded" alt="Product Image">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="top-selling-content text-center text-md-start">
+                    <div class="reviews mb-2">
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                    </div>
+                    <h4 class="top-selling-title fs-5">
+                      <a href="singleProduct.html">Turmeric Curcumin Powder</a>
+                      <!-- <p class="text-muted mt-3">Anti-Inflammatory Support</p> -->
+                    </h4>
+                    <p class="selling-price mb-2">
+                      <span class="text-decoration-line-through text-muted me-2">300</span>
+                      <span class="fw-bold text-success">250</span>
+                    </p>
+                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                      <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for each product with different image or title -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <div class="single-top-selling shadow p-4 h-100">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="top-selling-img mb-3 text-center">
+                    <img src="assets/images/product/p-12.jfif" class="img-fluid rounded" alt="Product Image">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="top-selling-content text-center text-md-start">
+                    <div class="reviews mb-2">
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                    </div>
+                    <h4 class="top-selling-title fs-5">
+                      <a href="singleProduct.html">Moringa Leaf Powder</a>
+                    </h4>
+                    <p class="selling-price mb-2">
+                      <span class="text-decoration-line-through text-muted me-2">300</span>
+                      <span class="fw-bold text-success">250</span>
+                    </p>
+                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                      <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <div class="single-top-selling shadow p-4 h-100">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="top-selling-img mb-3 text-center">
+                    <img src="assets/images/product/p-11.jfif" class="img-fluid rounded" alt="Product Image">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="top-selling-content text-center text-md-start">
+                    <div class="reviews mb-2">
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                    </div>
+                    <h4 class="top-selling-title fs-5">
+                      <a href="singleProduct.html">Fenugreek Seed Powder</a>
+                    </h4>
+                    <p class="selling-price mb-2">
+                      <span class="text-decoration-line-through text-muted me-2">300</span>
+                      <span class="fw-bold text-success">250</span>
+                    </p>
+                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                      <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <div class="single-top-selling shadow p-4 h-100">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="top-selling-img mb-3 text-center">
+                    <img src="assets/images/product/p-13.jfif" class="img-fluid rounded" alt="Product Image">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="top-selling-content text-center text-md-start">
+                    <div class="reviews mb-2">
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                      <span><i class="fa-solid fa-star text-warning"></i></span>
+                    </div>
+                    <h4 class="top-selling-title fs-5">
+                      <a href="singleProduct.html">Ashwagandha Root Powder</a>
+                    </h4>
+                    <p class="selling-price mb-2">
+                      <span class="text-decoration-line-through text-muted me-2">300</span>
+                      <span class="fw-bold text-success">250</span>
+                    </p>
+                    <a href="#" class="rainbow-btn btn-buy mt-auto">
+                      <i class="fas fa-shopping-cart me-2"></i> Add to cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <!-- ======= MAIN CONTENT END ======= -->
+
+  <!-- ======= FOOTER START ======= -->
+  <!-- Footer Section -->
+  <footer class="footer-section pt-5">
+    <div class="footer-logo-area">
+      <div class="container">
+        <div class="row d-flex align-items-center py-4">
+          <div class="col-md-6">
+            <div class="footer-logo text-start">
+              <a href="#">
+                <img src="assets/images/logo//logo-main.png" alt="Luminous Logo" class="img-fluid"
+                  style="height: 40px;">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 text-end">
+            <div class="social-icons">
+              <a href="#" class=" me-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class=" me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class=" me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" class=" me-2"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" class=""><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-row-content">
+      <div class="container">
+        <div class="row">
+          <!-- Company Info -->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+            <div class="footer-left-content">
+              <h3 class="footer-contact-heading text-uppercase mb-4">Business Contact</h3>
+              <div class="business-contact">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-map-marker-alt me-2" style="color: #47ffb3;"></i>
+                    123 Yarran St, Punchbowl, NSW 2196, Australia
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-phone-alt me-2" style="color: #4795ff;"></i>
+                    (64) 8342 1245
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-envelope me-2" style="color: #ffb347;"></i>
+                    support@rainbowglobal.com
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-sm btn-outline-light">
+                  <i class="fas fa-directions me-1"></i> Get direction
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Newsletter -->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start border-right-colum">
+            <div class="footer-middle-content">
+              <h5 class="text-uppercase mb-4">Subscribe Newsletter</h5>
+              <p class="small">We invite you to register to read the latest news, offers and events about our company.
+                We
+                promise not to spam your inbox.</p>
+              <div class="input-group mb-3">
+                <input type="email" class="form-control form-control-sm" placeholder="Enter your e-mail..."
+                  aria-label="Email">
+                <button class="btn btn-sm text-white" type="button"
+                  style="background: linear-gradient(45deg, #ff6b9d, #ffb347);">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start">
+            <div class="footer-right-content">
+              <div class="row">
+                <!-- About Us -->
+                <div class="col-md-6">
+                  <h5 class="text-uppercase mb-4">About Us</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-1"><a href="#" class="text-decoration-none">About Us</a></li>
+                    <li class="mb-1"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                    <li class="mb-1"><a href="#" class="text-decoration-none">Our Store</a></li>
+                    <li><a href="#" class="text-decoration-none">Our Story</a></li>
+                  </ul>
+                </div>
+                <!-- Resources -->
+                <div class="col-md-6">
+                  <h5 class="text-uppercase mb-4">Resources</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-1"><a href="#" class="text-decoration-none">Privacy Policies</a></li>
+                    <li class="mb-1"><a href="#" class="text-decoration-none">Terms & Conditions</a></li>
+                    <li class="mb-1"><a href="#" class="text-decoration-none">Returns & Refunds</a></li>
+                    <li class="mb-1"><a href="#" class="text-decoration-none">FAQ's</a></li>
+                    <li><a href="#" class="text-decoration-none">Shipping</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-1" style="border-color: rgba(255,255,255,0.1);">
+
+    <!-- Copyright -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-start">
+          <p class="small mb-0">Copyright &copy; 2025 by Rainbow Global. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <p class="small mb-0">Developed By <a href="#" class="developed-link" target="_blank">Freelance IT</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- ======= FOOTER END ======= -->
+
+  <!-- Bootstrap JS & Custom JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Mobile Responsive js -->
+  <script src="js/mobileResponsive.js"></script>
+
+  <!-- Font awesome js -->
+  <script src="js/all.min.js"></script>
+
+  <!-- Hero Slider JS -->
+  <script src="js/heroSlider.js"></script>
+
+  <!-- Hero Slider JS -->
+  <script src="js/logoSlider.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
