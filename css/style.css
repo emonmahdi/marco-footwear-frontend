@@ -3,8 +3,8 @@
 /* ========== Root Variables ========== */
 :root {
   /* --primary-color: #f97a00; */
-  --primary-color: #f9b233;
-  --secondary-color: #181818;
+  --primary-color: #e80d07;
+  --secondary-color: #134a1c;
   --text-color: #2c2c2c;
   --heading-text-color: #f97a00;
   --para-text-color: #666;
@@ -311,7 +311,9 @@ header {
 }
 
 .navbar-menu-items {
-  background: #f9b233;
+  /* background: #f9b233; */
+  background: var(--secondary-color);
+  color: #fff;
 }
 
 .nav-bar {
@@ -331,9 +333,12 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #111;
+  color: #fff;
   padding: 10px;
   position: relative;
+}
+nav a:hover {
+  color: var(--primary-color);
 }
 
 .has-dropdown {
