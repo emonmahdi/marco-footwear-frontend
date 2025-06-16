@@ -329,7 +329,7 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 10px 0;
+  padding: 2px 0;
   align-items: center;
 }
 
@@ -627,7 +627,7 @@ nav a:hover {
 }
 .categories-section .single-category h4 a {
   font-size: 15px;
-  color: var(--secondary-color);
+  color: var(--text-color);
   transition: 0.4s all ease-out;
 }
 .categories-section .single-category h4 a:hover {
@@ -670,8 +670,13 @@ nav a:hover {
 }
 
 .product-name {
+  color: var(--text-color);
   font-size: 1.2rem;
   font-weight: 600;
+  transition: all 0.3 ease;
+}
+.product-name:hover {
+  color: var(--primary-color);
 }
 
 .product-price {
@@ -1905,7 +1910,7 @@ nav a:hover {
 
 .current-price {
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 1.1rem;
 }
 
@@ -1917,7 +1922,7 @@ nav a:hover {
 }
 
 .discount-percent {
-  color: #fd79a8;
+  color: var(--heading-text-color);
   font-weight: 600;
   margin-left: 8px;
   font-size: 0.9rem;
