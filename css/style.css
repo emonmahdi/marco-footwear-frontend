@@ -614,11 +614,14 @@ nav a:hover {
   transition: var(--transition);
 }
 .categories-section .single-category img {
-  width: 200px;
-  height: 130px;
-  /* border-radius: 50%; */
+  width: 160px;
+  height: 160px;
+  padding: 30px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
   margin-bottom: 10px;
   display: inline-block;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   transition: var(--transition);
   object-fit: cover;
 }
@@ -718,13 +721,6 @@ nav a:hover {
   height: 100px;
 }
 
-/* .featured-logo-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: 80px;
-} */
-
 .featured-logo-track {
   transition: transform 0.6s ease-in-out;
 }
@@ -739,49 +735,11 @@ nav a:hover {
   filter: grayscale(100%);
 }
 
-/* .logo-item {
-  width: 140px;
-  margin-right: 1.5rem;
-  flex-shrink: 0;
-  opacity: 0.8;
-  filter: grayscale(100%);
-  transition: all 0.3s ease;
-  vertical-align: middle;
-} */
-
 .logo-item:hover {
   filter: none;
   transform: scale(1.05);
   opacity: 1;
 }
-
-/* .featured-logo-wrapper {
-  overflow: hidden;
-  padding: 1rem 0;
-}
-
-.featured-logo-track {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  animation: scroll 30s linear infinite;
-} */
-
-/* .logo-item {
-  width: 110px;  
-  height: auto;
-  flex-shrink: 0;
-  opacity: 0.85;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  object-fit: contain;
-  padding: 0.5rem;
-  border-radius: 12px;
-}
-
-.logo-item:hover {
-  transform: scale(1.1);
-  opacity: 1;
-} */
 
 /* Optional: auto-scroll effect */
 @keyframes scroll {
