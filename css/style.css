@@ -696,6 +696,21 @@ nav a:hover {
   margin-top: 10px;
 }
 
+/* ==== */
+.quantity-section {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-input {
+  width: 200px;
+  padding: 4px 8px;
+}
+
+.submit-cart-btn {
+  padding: 4px 10px;
+}
+
 /* =================Features Section Start============================ */
 #featured-logo-section {
   background-color: #f8f9fa;
@@ -1062,23 +1077,12 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-.quantity-btn {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e5e7eb;
-  border: none;
-  cursor: pointer;
-}
-
 .quantity-input {
-  width: 60px;
+  width: 146px;
   height: 40px;
   text-align: center;
   border: 1px solid #e5e7eb;
-  margin: 0 0.5rem;
+  margin: 0px 0.5rem;
 }
 
 .add-to-cart {
@@ -1913,4 +1917,31 @@ nav a:hover {
 
 .chekout-cart-section .btn-apply {
   border-radius: 0 5px 5px 0;
+}
+
+.order-success-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: #333;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  text-align: center;
+  animation: fadeInUp 0.4s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
