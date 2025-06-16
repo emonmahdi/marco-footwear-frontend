@@ -715,7 +715,7 @@ nav a:hover {
 .featured-logo-wrapper {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 100px;
 }
 
 /* .featured-logo-wrapper {
@@ -729,13 +729,15 @@ nav a:hover {
   transition: transform 0.6s ease-in-out;
 }
 
-/* .logo-item {
-  width: 190px;
+.logo-item {
+  width: 160px;
   height: auto;
   margin-right: 1.5rem;
   flex-shrink: 0;
   transition: transform 0.3s ease, filter 0.3s ease;
-} */
+  opacity: 0.9;
+  filter: grayscale(100%);
+}
 
 /* .logo-item {
   width: 140px;
@@ -747,13 +749,13 @@ nav a:hover {
   vertical-align: middle;
 } */
 
-/* .logo-item:hover {
+.logo-item:hover {
   filter: none;
   transform: scale(1.05);
   opacity: 1;
-} */
+}
 
-.featured-logo-wrapper {
+/* .featured-logo-wrapper {
   overflow: hidden;
   padding: 1rem 0;
 }
@@ -763,10 +765,10 @@ nav a:hover {
   gap: 1.5rem;
   align-items: center;
   animation: scroll 30s linear infinite;
-}
+} */
 
-.logo-item {
-  width: 110px; /* Smaller and consistent across all screens */
+/* .logo-item {
+  width: 110px;  
   height: auto;
   flex-shrink: 0;
   opacity: 0.85;
@@ -779,7 +781,7 @@ nav a:hover {
 .logo-item:hover {
   transform: scale(1.1);
   opacity: 1;
-}
+} */
 
 /* Optional: auto-scroll effect */
 @keyframes scroll {
