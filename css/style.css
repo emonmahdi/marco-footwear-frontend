@@ -170,6 +170,13 @@ section {
 .topbar a:hover {
   color: #2563eb;
 }
+
+@media (max-width: 450px) {
+  .topbar {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .topbar .d-flex {
     gap: 1rem;
@@ -287,8 +294,8 @@ header {
 
 .icon span {
   position: absolute;
-  top: -18px;
-  right: -8px;
+  top: -11px;
+  right: -13px;
   background: var(--primary-color);
   color: #fff;
   border-radius: 50%;
@@ -329,7 +336,7 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 2px 0;
+  padding: 0;
   align-items: center;
 }
 
@@ -408,7 +415,7 @@ nav a:hover {
   left: -100%;
   width: 250px;
   height: 100vh;
-  background: #f9b233;
+  background: var(--secondary-color);
   transition: 0.3s ease;
   padding: 20px;
   z-index: 1000;
@@ -421,7 +428,7 @@ nav a:hover {
 .mobile-nav a {
   display: block;
   padding: 10px;
-  color: #111;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -430,6 +437,7 @@ nav a:hover {
   font-weight: bold;
   text-align: right;
   cursor: pointer;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
