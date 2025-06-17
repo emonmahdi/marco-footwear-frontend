@@ -22,7 +22,7 @@
 
     <!-- responsiveness -->
     <link rel="stylesheet" href="css/responsive.css" />
-    <style>
+    <!-- <style>
         body {
             background-color: #f8f9fa;
         }
@@ -64,7 +64,60 @@
                 font-size: 48px;
             }
         }
+    </style> -->
+
+    <style>
+        .order-success-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        .order-success-icon {
+            color: #28a745;
+            font-size: 64px;
+        }
+
+        .marco-btn {
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .marco-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Unique background colors for each button */
+        .print-btn {
+            background-color: #022252;
+            /* Yellow - Back to Home */
+            color: #fff;
+        }
+
+        .shop-btn {
+            background-color: #134a1c;
+        }
+
+
+
+        @media print {
+
+            .marco-btn,
+            .btn,
+            a {
+                display: none !important;
+            }
+        }
     </style>
+
+
 </head>
 
 <body>
@@ -252,15 +305,14 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <div class="container my-5">
+    <!-- <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10">
                 <div class="order-success-card text-center">
-                    <i class="fas fa-check-circle order-success-icon mb-4"></i>
+                    <i class="fas fa-check-circle order-success-icon mb-4"></i> 
                     <h2 class="mb-3">Thank You! 🎉</h2>
                     <p class="lead mb-4">Your order has been placed successfully.</p>
-
-                    <!-- Order Summary -->
+ 
                     <div class="text-start border-top pt-4">
                         <h5 class="mb-3">Order Summary</h5>
                         <ul class="list-group mb-3">
@@ -294,7 +346,78 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="order-success-card text-center">
+
+                    <!-- Company Logo -->
+                    <a href="index.html" class="text-center d-block mb-4">
+                        <img src="assets/images/logo/logo-top.png" class="img-fluid mx-auto" width="160"
+                            alt="Marco Footwear Logo">
+                    </a>
+
+                    <!-- Success Icon -->
+                    <i class="fas fa-check-circle order-success-icon mb-4"></i>
+
+                    <!-- Confirmation Message -->
+                    <h2 class="mb-3">Thank You! 🎉</h2>
+                    <p class="lead mb-4">Your order has been placed successfully.</p>
+
+                    <!-- Order Summary -->
+                    <div class="text-start border-top pt-4">
+                        <h5 class="mb-3">Order Summary</h5>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Subtotal</span>
+                                <strong>৳90</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Shipping</span>
+                                <strong>৳5</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total</span>
+                                <strong>৳95</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Payment Method</span>
+                                <strong>Cash on Delivery</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Order ID</span>
+                                <strong>#MFW123456</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="row text-center mt-4 g-2">
+                        <div class="col-md-12 col-12">
+                            <button onclick="window.print()"
+                                class="marco-btn print-btn w-100 py-2 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-print me-2"></i>Print Confirmation
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <a href="index.html" class="marco-btn w-100 py-2">Back to Home</a>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <a href="shop.html" class="marco-btn shop-btn w-100 py-2">Shop Again</a>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <!-- ======= FOOTER START ======= -->
     <footer class="footer-section pt-5">
