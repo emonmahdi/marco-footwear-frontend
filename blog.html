@@ -69,7 +69,7 @@
                     </div>
                     <div class="logo">
                         <a href="index.html">
-                            <img src="assets/images/logo/logo-top.png" alt="Rainbow Global Logo" class="img-fluid"
+                            <img src="assets/images/logo/logo-top.png" alt="Marco Footwear Logo" class="img-fluid"
                                 style="height: 45px;">
                         </a>
                     </div>
@@ -78,11 +78,6 @@
                 <div class="center">
                     <div class="search-bar">
                         <input type="text" placeholder="Search..." />
-                        <!-- <select>
-              <option value="">All</option>
-              <option value="electronics">Electronics</option>
-              <option value="fashion">Fashion</option>
-            </select> -->
                         <button><i class="fas fa-search"></i></button>
                     </div>
                 </div>
@@ -92,16 +87,6 @@
                         <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
                             <span>15</span> </a>
                     </div>
-                    <!-- <div class="icon user" id="userIcon">
-            <i class="fas fa-user"></i>
-            <div class="dropdown">
-              <a href="login.html">Login</a>
-              <a href="sign-up.html">Register</a>
-              <a href="memberLogin.html">Member Login</a>
-              <a href="memberRegister.html">Member Register</a>
-              <a href="dashboard.html">Dashboard</a>
-            </div>
-          </div> -->
                 </div>
                 <!-- mobile sticky bar menu -->
                 <div class="mobile-sticky-bar-menu">
@@ -109,9 +94,9 @@
                         <span></span><span></span><span></span>
                     </div>
                     <div class="logo">
-                        <a href="#">
-                            <img src="assets/images/logo/logo-main.png" alt="Rainbow Global Logo" class="img-fluid"
-                                style="height: 50px;">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo-top.png" alt="Marco Footwear Logo" class="img-fluid"
+                                style="height: 30px;">
                         </a>
                     </div>
                     <div class="user-cart-icons d-flex align-items-center gap-3">
@@ -124,6 +109,35 @@
                         </div>
                     </div>
                 </div>
+                <!-- Mobile Sticky Bottom Menu Start-->
+                <div id="mobile-sticky-bottom-menu">
+                    <ul class="mobile-bottom-ul">
+                        <li class="menu-item">
+                            <a href="#" class="active"><i class="fas fa-home"></i><span>Home</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><i class="fa-solid fa-table"></i><span>Categories</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" id="searchToggle"><i class="fas fa-search"></i><span>Search</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><i class="fas fa-shopping-bag"></i><span>Shop</span></a>
+                        </li>
+                        <li class="search-field" id="searchField">
+                            <form id="searchForm" onsubmit="event.preventDefault();">
+                                <input type="text" placeholder="Search products..." />
+                                <button type="button" id="closeSearch"><i class="fas fa-times"></i></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Mobile Sticky Bottom Menu Start-->
             </div>
         </div>
 
@@ -133,20 +147,10 @@
                     <nav>
                         <a href="index.html">Home</a>
                         <a href="shop.html">Shop</a>
-                        <!-- <div class="has-dropdown">
-              <a href="#">Shop <i class="fa-solid fa-caret-down"></i></a>
-              <div class="dropdown">
-                <a href="shop.html">Shop Page</a>
-                <a href="#">Product Details</a>
-              </div>
-            </div> -->
                         <a href="about.html">About</a>
                         <a href="blog.html">Blog</a>
                         <a href="contact.html">Contact</a>
                     </nav>
-                    <!-- <div class="nav-actions">
-            <a href="login.html" class="marco-btn login-reg-btn">Login</a>
-          </div> -->
                 </div>
             </div>
         </div>
@@ -156,13 +160,9 @@
         <div class="mobile-close" onclick="toggleMobileNav()">×</div>
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="#">Product Details</a>
-        <a href="#">Cart</a>
-        <a href="#">Checkout</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
-        <a href="#" class="seller-btn" style="margin-top:20px;">Become a Seller</a>
     </div>
 
 
@@ -418,9 +418,9 @@
                                         marcofootwearbd@gmail.com
                                     </li>
                                 </ul>
-                                <a href="#" class="btn btn-sm btn-outline-light">
+                                <!-- <a href="#" class="btn btn-sm btn-outline-light">
                                     <i class="fas fa-directions me-1"></i> Get direction
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -514,6 +514,9 @@
     <script src="js/singleProduct.js"></script>
     <script src="js/singlProductImage.js"></script>
     <script src="js/singleProductSelect.js"></script>
+
+    <!-- sticky search JS -->
+    <script src="js/sticky-search.js"></script>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
