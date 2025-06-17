@@ -992,7 +992,7 @@ nav a {
 }
 
 .logo-item:hover {
-  filter: none;
+  filter: grayscale(80%);
   transform: scale(1.05);
   opacity: 1;
 }
@@ -1170,6 +1170,17 @@ nav a {
   color: #181818;
 }
 
+@media (max-width: 450px) {
+  .subscriber-input input {
+    margin-bottom: 10px;
+  }
+  .subscriber-input input {
+    padding: 15px;
+  }
+  .subscriber-input .marco-btn {
+    padding: 5px 20px;
+  }
+}
 /* ========== Utility Classes ========== */
 /* .text-center {
   text-align: center;
@@ -2190,6 +2201,24 @@ nav a {
 }
 
 .order-success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.order-success-content {
+  max-width: 400px;
+  width: 90%;
+}
+
+/* .order-success-popup {
   display: none;
   position: fixed;
   top: 50%;
@@ -2214,4 +2243,4 @@ nav a {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
-}
+} */

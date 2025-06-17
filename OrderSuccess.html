@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marco Footwear</title>
-
+    <title>Order Successful - Marco Footwear</title>
     <!-- Favicon -->
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 
@@ -23,16 +22,57 @@
 
     <!-- responsiveness -->
     <link rel="stylesheet" href="css/responsive.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
 
+        .order-success-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        .order-success-icon {
+            color: #28a745;
+            font-size: 64px;
+        }
+
+        .marco-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .marco-btn:last-child {
+            background-color: #134a1c;
+        }
+
+        .marco-btn:hover {
+            background-color: #333;
+        }
+
+        @media (max-width: 576px) {
+            .order-success-card {
+                padding: 20px;
+            }
+
+            .order-success-icon {
+                font-size: 48px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- ======= HEADER START ======= -->
     <!-- Topbar -->
     <div class="topbar py-2 border-bottom bg-light">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <!-- Left Side - Contact Numbers -->
                 <div class="d-flex flex-wrap gap-3 mb-2 mb-md-0">
                     <div class="d-flex align-items-center">
@@ -212,68 +252,17 @@
         <a href="contact.html">Contact</a>
     </div>
 
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="order-success-card text-center">
+                    <i class="fas fa-check-circle order-success-icon mb-4"></i>
+                    <h2 class="mb-3">Thank You! 🎉</h2>
+                    <p class="lead mb-4">Your order has been placed successfully.</p>
 
-    <!-- checkout body content start -->
-    <div class="chekout-cart-section">
-        <div class="container py-5">
-            <div class="row">
-                <!-- Cart Table -->
-                <div class="col-lg-8 mb-4">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover bg-white">
-                            <thead class="table-light">
-                                <tr>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">Size</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="assets/images/product/kids-shoes.png" class="product-img"
-                                            alt="Product" />
-                                    </td>
-                                    <td>Vitamin D3</td>
-                                    <td>Medium</td>
-                                    <td>৳25</td>
-                                    <td><input type="number" class="form-control form-control-sm" value="2" min="1">
-                                    </td>
-                                    <td>৳50</td>
-                                    <td><button class="btn btn-sm btn-danger">Remove</button></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/images/product/sports.png" class="product-img" alt="Product" />
-                                    </td>
-                                    <td>Omega-3 Fish Oil</td>
-                                    <td>Large</td>
-                                    <td>৳40</td>
-                                    <td><input type="number" class="form-control form-control-sm" value="1" min="1">
-                                    </td>
-                                    <td>৳40</td>
-                                    <td><button class="btn btn-sm btn-danger">Remove</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Checkout Summary -->
-                <div class="col-lg-4">
                     <!-- Order Summary -->
-                    <div class="card card-summary p-4 mb-4">
+                    <div class="text-start border-top pt-4">
                         <h5 class="mb-3">Order Summary</h5>
-
-                        <!-- Coupon Input -->
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control coupon-input" placeholder="Coupon Code" />
-                            <button class="btn btn-dark btn-apply" type="button">Apply</button>
-                        </div>
-
-                        <!-- Totals -->
                         <ul class="list-group mb-3">
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Subtotal</span>
@@ -287,85 +276,26 @@
                                 <span>Total</span>
                                 <strong>৳95</strong>
                             </li>
-                        </ul>
-
-                        <!-- Checkout Button -->
-                        <button class="marco-btn w-100" id="checkoutBtn">Proceed to Checkout</button>
-                    </div>
-
-                    <!-- Order Confirmation Form (Hidden by default) -->
-                    <div class="card p-4" id="orderForm"
-                        style="display: none; opacity: 0; transition: opacity 0.5s ease;">
-                        <h5 class="mb-3">Place Your Order</h5>
-                        <form id="orderConfirmForm">
-                            <div class="mb-3">
-                                <label for="fullName" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
-                                    required />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="emailAddress" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com"
-                                    required />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="phoneNumber" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phoneNumber" placeholder="+8801XXXXXXXXX"
-                                    required />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="shippingAddress" class="form-label">Shipping Address</label>
-                                <textarea class="form-control" id="shippingAddress" rows="3"
-                                    placeholder="Your delivery address..." required></textarea>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="paymentMethod" class="form-label">Payment Method</label>
-                                <select class="form-select" id="paymentMethod" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option value="cod">Cash on Delivery</option>
-                                    <option value="bkash">bKash</option>
-                                    <option value="nagad">Nagad</option>
-                                    <option value="card">Credit/Debit Card</option>
-                                </select>
-                            </div>
-
-                            <button type="submit" class="marco-btn w-100">Confirm & Place Order</button>
-                        </form>
-                    </div>
-
-
-                    <!-- <div class="card card-summary p-4">
-                        <h5 class="mb-3">Order Summary</h5>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control coupon-input" placeholder="Coupon Code">
-                            <button class="btn btn-dark btn-apply" type="button">Apply</button>
-                        </div>
-                        <ul class="list-group mb-3">
                             <li class="list-group-item d-flex justify-content-between">
-                                <span>Subtotal</span>
-                                <strong>৳90</strong>
+                                <span>Payment Method</span>
+                                <strong>Cash on Delivery</strong>
                             </li>
                             <li class="list-group-item d-flex justify-content-between">
-                                <span>Shipping</span>
-                                <strong>৳5</strong>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <span>Total</span>
-                                <strong>৳95</strong>
+                                <span>Order ID</span>
+                                <strong>#MFW123456</strong>
                             </li>
                         </ul>
-                        <button class="marco-btn w-100">Proceed to Checkout</button>
-                    </div> -->
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="index.html" class="marco-btn w-50">Back to Home</a>
+                        <a href="shop.html" class="marco-btn w-50">Shop Again</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ======= FOOTER START ======= -->
     <!-- ======= FOOTER START ======= -->
     <footer class="footer-section pt-5">
         <div class="footer-logo-area">
@@ -410,9 +340,9 @@
                                         marcofootwearbd@gmail.com
                                     </li>
                                 </ul>
-                                <!-- <a href="#" class="btn btn-sm btn-outline-light">
-                                    <i class="fas fa-directions me-1"></i> Get direction
-                                </a> -->
+                                <!--  <a href="#" class="btn btn-sm btn-outline-light">
+                  <i class="fas fa-directions me-1"></i> Get direction
+                </a> -->
                             </div>
                         </div>
                     </div>
@@ -424,11 +354,10 @@
                                 our company.
                                 We
                                 promise not to spam your inbox.</p>
-                            <div class="input-group mb-3">
+                            <div class="input-group subscriber-input mb-3">
                                 <input type="text" class="form-control form-control-sm"
                                     placeholder="Enter your mobile number..." aria-label="Mobile">
-                                <button class="btn btn-sm text-white" type="button"
-                                    style="background: linear-gradient(45deg, #ff6b9d, #ffb347);">
+                                <button class="btn btn-sm text-white" type="button">
                                     <i class="fas fa-paper-plane"></i>
                                 </button>
                             </div>
@@ -487,24 +416,6 @@
     </footer>
     <!-- ======= FOOTER END ======= -->
 
-    <!-- Order Confirmation Popup -->
-    <div id="orderSuccessPopup" class="order-success-popup" style="display: none;">
-        <div class="order-success-content text-center bg-white p-4 rounded shadow">
-            <h5 class="mb-2">🛒 Are you sure to place this order?</h5>
-            <p class="mb-3">Please confirm to proceed.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <button id="orderConfirmNo" class="btn btn-danger px-4">No</button>
-                <button id="orderConfirmYes" class="btn btn-success px-4">Yes</button>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
     <!-- Bootstrap JS & Custom JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
@@ -536,55 +447,6 @@
     <script>
         AOS.init();
     </script>
-    <script>
-        document.getElementById("checkoutBtn").addEventListener("click", function () {
-            const form = document.getElementById("orderForm");
-            form.style.display = "block";
-            setTimeout(() => {
-                form.style.opacity = 1;
-                form.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 50);
-        });
-    </script>
-    <!-- <script>
-        const form = document.getElementById("orderConfirmForm");
-        const popup = document.getElementById("orderSuccessPopup");
-        const closeBtn = document.getElementById("orderPopupCloseBtn");
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            popup.style.display = "block";
-        });
-
-        closeBtn.addEventListener("click", function () {
-            popup.style.display = "none";
-            form.reset();
-        });
-    </script> -->
-    <script>
-        const form = document.getElementById("orderConfirmForm");
-        const popup = document.getElementById("orderSuccessPopup");
-        const yesBtn = document.getElementById("orderConfirmYes");
-        const noBtn = document.getElementById("orderConfirmNo");
-
-        // When user submits the form
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            popup.style.display = "flex"; // Show popup
-        });
-
-        // If user clicks Yes, redirect to success page
-        yesBtn.addEventListener("click", function () {
-            window.location.href = "OrderSuccess.html";
-        });
-
-        // If user clicks No, close popup
-        noBtn.addEventListener("click", function () {
-            popup.style.display = "none";
-        });
-    </script>
-
-
 </body>
 
 </html>
