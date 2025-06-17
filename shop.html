@@ -146,10 +146,10 @@
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <ul class="navbar-nav d-flex flex-row flex-wrap gap-3">
                             <li class="nav-item">
-                                <a class="nav-link active-menu" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="shop.html">Shop</a>
+                                <a class="nav-link active-menu" href="shop.html">Shop</a>
                             </li>
 
                             <li class="nav-item dropdown position-relative">
@@ -236,8 +236,8 @@
                     <!-- 
                     <div class="filter-title">Price Range</div>
                     <div class="d-flex justify-content-between">
-                        <span class="price-value" id="priceMinValue">$10</span>
-                        <span class="price-value" id="priceMaxValue">$100</span>
+                        <span class="price-value" id="priceMinValue">৳10</span>
+                        <span class="price-value" id="priceMaxValue">৳100</span>
                     </div>
                     <input type="range" class="price-range" min="10" max="100" value="10" id="priceMin">
                     <input type="range" class="price-range mt-2" min="10" max="100" value="100" id="priceMax"> -->
@@ -247,8 +247,8 @@
                         <div class="filter-title">Price Range</div>
 
                         <div class="price-values">
-                            <span id="priceMinValue1">$20</span>
-                            <span id="priceMaxValue2">$80</span>
+                            <span id="priceMinValue1">৳20</span>
+                            <span id="priceMaxValue2">৳80</span>
                         </div>
 
                         <div class="slider-container">
@@ -642,8 +642,8 @@
                 }
             }
 
-            priceMinValue.textContent = `$${minVal}`;
-            priceMaxValue.textContent = `$${maxVal}`;
+            priceMinValue.textContent = `৳৳{minVal}`;
+            priceMaxValue.textContent = `৳৳{maxVal}`;
         }
 
         priceMin.addEventListener('input', updatePrices);

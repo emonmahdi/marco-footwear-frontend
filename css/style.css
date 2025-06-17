@@ -1239,6 +1239,7 @@ nav a {
 }
 
 .product-title {
+  color: var(--text-color);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -1260,15 +1261,16 @@ nav a {
 }
 
 .current-price {
-  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1.1rem;
 }
 
 .original-price {
   text-decoration: line-through;
-  color: var(--secondary-color);
-  margin-left: 0.5rem;
+  color: #adb5bd;
+  margin-left: 8px;
+  font-size: 0.9rem;
 }
 
 .product-description {
@@ -1489,7 +1491,7 @@ nav a {
 }
 
 .nav-tabs .nav-link {
-  color: var(--secondary-color);
+  color: var(--text-color) !important;
   font-weight: 600;
   border: none;
   padding: 12px 20px;
@@ -1729,6 +1731,7 @@ nav a {
 
 .blog-title {
   font-weight: 800;
+  color: var(--text-color);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1977,6 +1980,31 @@ nav a {
     margin-bottom: 25px;
   }
 }
+.search-blog-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-blog-box button {
+  border: none;
+  outline: none;
+}
+.search-icon {
+  background-color: var(--secondary-color);
+  padding: 9px 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list-group .list-group-item a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+.list-group .list-group-item a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
 
 /* =============Contact Page Styles ============== */
 /* Custom pastel backgrounds */
@@ -2114,13 +2142,13 @@ nav a {
   margin-bottom: 15px;
 }
 
-.current-price {
+.product-current-price {
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--text-color);
   font-size: 1.1rem;
 }
 
-.original-price {
+.product-original-price {
   text-decoration: line-through;
   color: #adb5bd;
   margin-left: 8px;
