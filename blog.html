@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainbow Global</title>
-
+    <title>Marco Footwear </title>
     <!-- Favicon -->
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 
@@ -140,31 +139,76 @@
                 <!-- Mobile Sticky Bottom Menu Start-->
             </div>
         </div>
-
         <div class="navbar-menu-items">
             <div class="container">
                 <div class="nav-bar">
-                    <nav>
-                        <a href="index.html">Home</a>
-                        <a href="shop.html">Shop</a>
-                        <a href="about.html">About</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contact.html">Contact</a>
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <ul class="navbar-nav d-flex flex-row flex-wrap gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link active-menu" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html">Shop</a>
+                            </li>
+
+                            <li class="nav-item dropdown position-relative">
+                                <button class="nav-link btn border-0 bg-transparent" id="categoryToggle"
+                                    onclick="toggleCategoryDropdown()">
+                                    Categories <i class="fas fa-caret-down ms-1"></i>
+                                </button>
+                                <ul class="dropdown-menu-custom" id="categoryDropdown">
+                                    <li><a class="dropdown-item" href="#">Men’s Shoes</a></li>
+                                    <li><a class="dropdown-item" href="#">Women’s Shoes</a></li>
+                                    <li><a class="dropdown-item" href="#">Kids’ Shoes</a></li>
+                                    <li><a class="dropdown-item" href="#">Sneakers</a></li>
+                                    <li><a class="dropdown-item" href="#">Boots</a></li>
+                                    <li><a class="dropdown-item" href="#">Sports Shoes</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>
         </div>
+
+
     </header>
 
     <div class="mobile-nav" id="mobileNav">
         <div class="mobile-close" onclick="toggleMobileNav()">×</div>
+
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
+
+        <!-- ✅ Categories Toggle -->
+        <button class="mobile-categories-toggle" onclick="toggleMobileCategories()">
+            Categories <i class="fas fa-angle-down"></i>
+        </button>
+
+        <!-- ✅ Dropdown Items -->
+        <div id="mobileCategoriesDropdown" class="mobile-categories-dropdown">
+            <a href="#">Men’s Shoes</a>
+            <a href="#">Women’s Shoes</a>
+            <a href="#">Kids’ Shoes</a>
+            <a href="#">Sneakers</a>
+            <a href="#">Boots</a>
+            <a href="#">Sports Shoes</a>
+        </div>
+
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
     </div>
-
 
 
 
@@ -294,13 +338,13 @@
                     <!-- Blog Sidebar -->
                     <div class="col-lg-4 animate__animated animate__fadeIn">
                         <!-- Search Widget -->
-                        <div class="blog-sidebar mb-4">
+                        <!-- <div class="blog-sidebar mb-4">
                             <h4 class="sidebar-title">Search</h4>
                             <div class="search-box">
                                 <i class="fas fa-search"></i>
                                 <input type="text" class="form-control" placeholder="Search articles...">
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Categories Widget -->
                         <div class="blog-sidebar mb-4">
@@ -517,6 +561,9 @@
 
     <!-- sticky search JS -->
     <script src="js/sticky-search.js"></script>
+
+    <!-- Dropdown Menu JS -->
+    <script src="js/dropdown-menu.js"></script>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
