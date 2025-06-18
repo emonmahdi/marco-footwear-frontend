@@ -1395,6 +1395,12 @@ nav a {
   margin-bottom: 15px;
   line-height: 1.4;
 }
+.blog-card-title a {
+  color: var(--text-color);
+}
+.blog-card-title a:hover {
+  color: var(--primary-color);
+}
 
 .blog-card-text {
   color: #666;
@@ -1550,7 +1556,15 @@ nav a {
 .popular-post-title {
   font-weight: 600;
   font-size: 0.9rem;
+  color: var(--text-color);
   margin-bottom: 5px;
+}
+.popular-post-title a {
+  color: var(--text-color);
+
+  &:hover {
+    color: var(--primary-color);
+  }
 }
 
 .popular-post-date {
