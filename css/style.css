@@ -992,7 +992,7 @@ nav a {
 }
 
 .logo-item:hover {
-  filter: grayscale(80%);
+  filter: none;
   transform: scale(1.05);
   opacity: 1;
 }
