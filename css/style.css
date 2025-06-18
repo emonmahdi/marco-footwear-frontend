@@ -1125,6 +1125,9 @@ nav a {
 .footer-right-content {
   padding: 30px 0;
 }
+.footer-right-content li a:hover {
+  color: var(--primary-color);
+}
 .footer-contact-heading {
   color: #000;
   font-size: 20px;
@@ -1170,6 +1173,14 @@ nav a {
   color: #181818;
 }
 
+@media (max-width: 768px) {
+  .copy-right-text {
+    margin-bottom: 70px;
+  }
+  .copy-right-text .developer-text {
+    text-align: center !important;
+  }
+}
 @media (max-width: 450px) {
   .subscriber-input input {
     margin-bottom: 10px;
@@ -2081,7 +2092,6 @@ nav a {
   width: 100%;
   max-width: 400px;
   margin: 30px auto;
-  font-family: "Segoe UI", sans-serif;
 }
 
 .filter-title {

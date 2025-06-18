@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <!-- ======= HEADER START ======= -->
+  <!---------- Header Start --------->
   <!-- Topbar -->
   <div class="topbar py-2 border-bottom bg-light">
     <div class="container">
@@ -132,11 +132,10 @@
             </li>
           </ul>
         </div>
-
-
-        <!-- Mobile Sticky Bottom Menu Start-->
+        <!-- Mobile Sticky Bottom Menu End-->
       </div>
     </div>
+    <!-- Desktop Menu Items Start-->
     <div class="navbar-menu-items">
       <div class="container">
         <div class="nav-bar">
@@ -155,12 +154,12 @@
                   Categories <i class="fas fa-caret-down ms-1"></i>
                 </button>
                 <ul class="dropdown-menu-custom" id="categoryDropdown">
-                  <li><a class="dropdown-item" href="#">Men’s Shoes</a></li>
-                  <li><a class="dropdown-item" href="#">Women’s Shoes</a></li>
-                  <li><a class="dropdown-item" href="#">Kids’ Shoes</a></li>
-                  <li><a class="dropdown-item" href="#">Sneakers</a></li>
-                  <li><a class="dropdown-item" href="#">Boots</a></li>
-                  <li><a class="dropdown-item" href="#">Sports Shoes</a></li>
+                  <li><a class="dropdown-item" href="shop.html">Men’s Shoes</a></li>
+                  <li><a class="dropdown-item" href="shop.html">Women’s Shoes</a></li>
+                  <li><a class="dropdown-item" href="shop.html">Kids’ Shoes</a></li>
+                  <li><a class="dropdown-item" href="shop.html">Sneakers</a></li>
+                  <li><a class="dropdown-item" href="shop.html">Boots</a></li>
+                  <li><a class="dropdown-item" href="shop.html">Sports Shoes</a></li>
                 </ul>
               </li>
 
@@ -178,39 +177,36 @@
         </div>
       </div>
     </div>
+    <!-- ------------Mobile Menu--------------- -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-close" onclick="toggleMobileNav()">×</div>
 
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
 
+      <!-- Categories Toggle -->
+      <button class="mobile-categories-toggle" onclick="toggleMobileCategories()">
+        Categories <i class="fas fa-angle-down"></i>
+      </button>
+
+      <!-- Dropdown Items -->
+      <div id="mobileCategoriesDropdown" class="mobile-categories-dropdown">
+        <a href="#">Men’s Shoes</a>
+        <a href="#">Women’s Shoes</a>
+        <a href="#">Kids’ Shoes</a>
+        <a href="#">Sneakers</a>
+        <a href="#">Boots</a>
+        <a href="#">Sports Shoes</a>
+      </div>
+
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </header>
 
-  <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-close" onclick="toggleMobileNav()">×</div>
-
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-
-    <!-- ✅ Categories Toggle -->
-    <button class="mobile-categories-toggle" onclick="toggleMobileCategories()">
-      Categories <i class="fas fa-angle-down"></i>
-    </button>
-
-    <!-- ✅ Dropdown Items -->
-    <div id="mobileCategoriesDropdown" class="mobile-categories-dropdown">
-      <a href="#">Men’s Shoes</a>
-      <a href="#">Women’s Shoes</a>
-      <a href="#">Kids’ Shoes</a>
-      <a href="#">Sneakers</a>
-      <a href="#">Boots</a>
-      <a href="#">Sports Shoes</a>
-    </div>
-
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-
-
-  <!-- Swiper Slider -->
+  <!---------------- Header End---------------->
+  <!------------ Swiper Slider Start ---------->
   <div class="swiper hero-swiper" style="background-color: #f8f9fa;">
     <div class="swiper-wrapper">
 
@@ -271,13 +267,11 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
+  <!------------ Swiper Slider End ------------>
 
-
-  <!-- ======= HEADER END ======= -->
-
-  <!-- ======= MAIN CONTENT START ======= -->
+  <!------------ Main Content Start ----------->
   <main>
-    <!-- =========Categories Section Start=============== -->
+    <!-------- Categories Section Start ------->
     <section class="categories-section">
       <div class="container">
         <div class="section-title">
@@ -336,7 +330,7 @@
         </div>
       </div>
     </section>
-    <!-- =========Quality Product Section Start ============= -->
+    <!------Quality Product Section Start ------>
     <section class="quality-product-section">
       <div class="container">
         <div class="section-title">
@@ -346,21 +340,6 @@
             <span><img src="assets/images/shoes/rotated-running-shoe.png.png" class="img-fluid" width="50px"
                 height="50px" alt=""></span>
           </h2>
-          <!-- <div>
-            <img src="assets/images/shoes/running-shoe.png" class="img-fluid" width="30px" height="30px" alt="">
-            <img src="assets/images/shoes/running-shoe.png" class="img-fluid" width="30px" height="30px" alt="">
-            <img src="assets/images/shoes/running-shoe.png" class="img-fluid" width="30px" height="30px" alt="">
-            <img src="assets/images/shoes/running-shoe.png" class="img-fluid" width="30px" height="30px" alt="">
-            <img src="assets/images/shoes/rotated-running-shoe.png.png" class="img-fluid" width="30px" height="30px"
-              alt="">
-            <img src="assets/images/shoes/rotated-running-shoe.png.png" class="img-fluid" width="30px" height="30px"
-              alt="">
-            <img src="assets/images/shoes/rotated-running-shoe.png.png" class="img-fluid" width="30px" height="30px"
-              alt="">
-            <img src="assets/images/shoes/rotated-running-shoe.png.png" class="img-fluid" width="30px" height="30px"
-              alt="">
-
-          </div> -->
         </div>
         <div class="row g-4">
           <!-- Shoe Card 1 -->
@@ -392,8 +371,6 @@
               </div>
             </div>
           </div>
-
-
           <!-- Shoe Card 2 -->
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="card product-card h-100">
@@ -422,7 +399,6 @@
               </div>
             </div>
           </div>
-
           <!-- Shoe Card 3 -->
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="card product-card h-100">
@@ -451,7 +427,6 @@
               </div>
             </div>
           </div>
-
           <!-- Shoe Card 4 -->
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="card product-card h-100">
@@ -480,7 +455,6 @@
               </div>
             </div>
           </div>
-
           <!-- Shoe Card 5 -->
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in">
             <div class="card product-card h-100">
@@ -509,7 +483,6 @@
               </div>
             </div>
           </div>
-
           <!-- Shoe Card 6 -->
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="card product-card h-100">
@@ -538,7 +511,6 @@
               </div>
             </div>
           </div>
-
           <!-- Shoe Card 7 -->
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="card product-card h-100">
@@ -567,7 +539,6 @@
               </div>
             </div>
           </div>
-
           <!-- Shoe Card 8 -->
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="card product-card h-100">
@@ -596,13 +567,11 @@
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
-    <!-- Featured Section Start -->
+    <!---------- Featured logo Section Start ------------>
     <section id="featured-logo-section">
       <div class="container">
         <div class="row align-items-center featured-section">
@@ -626,28 +595,10 @@
         </div>
       </div>
     </section>
-    <!-- Featured Section End -->
-    <!-- Subscribe Section start -->
-    <!-- <section class="subscribe-section">
-      <div class="container">
-        <h2 class="subscribe-title">Get Off Discount Coupon</h2>
-        <p class="subscribe-subtitle">by Subscribe our Newsletter</p>
-
-        <form class="subscribe-form" onsubmit="handleSubscribe(event)">
-          <div class="input-group subscribe-input-group">
-            <span class="input-group-text bg-white"><i class="fas fa-envelope"></i></span>
-            <input type="email" class="form-control" placeholder="EMAIL ADDRESS" required />
-            <button class="btn" type="submit">Get the Coupon</button>
-          </div>
-        </form>
-      </div>
-    </section> -->
-
-
   </main>
-  <!-- ======= MAIN CONTENT END ======= -->
+  <!------------- Main Content End --------------->
 
-  <!-- ======= FOOTER START ======= -->
+  <!---------------- Footer Start ---------------->
   <footer class="footer-section pt-5">
     <div class="footer-logo-area">
       <div class="container">
@@ -690,9 +641,6 @@
                     marcofootwearbd@gmail.com
                   </li>
                 </ul>
-                <!--  <a href="#" class="btn btn-sm btn-outline-light">
-                  <i class="fas fa-directions me-1"></i> Get direction
-                </a> -->
               </div>
             </div>
           </div>
@@ -760,7 +708,7 @@
       </div>
     </div>
   </footer>
-  <!-- ======= FOOTER END ======= -->
+  <!------------------- Footer End ---------------->
 
   <!-- Bootstrap JS & Custom JS -->
   <script src="js/bootstrap.bundle.min.js"></script>
@@ -788,13 +736,6 @@
 
   <!-- Custom JS -->
   <script src="js/script.js"></script>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-
 
 </body>
 

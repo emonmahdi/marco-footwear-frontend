@@ -26,11 +26,11 @@
 </head>
 
 <body>
-    <!-- ======= HEADER START ======= -->
+    <!---------- Header Start --------->
     <!-- Topbar -->
     <div class="topbar py-2 border-bottom bg-light">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <!-- Left Side - Contact Numbers -->
                 <div class="d-flex flex-wrap gap-3 mb-2 mb-md-0">
                     <div class="d-flex align-items-center">
@@ -131,11 +131,10 @@
                         </li>
                     </ul>
                 </div>
-
-
-                <!-- Mobile Sticky Bottom Menu Start-->
+                <!-- Mobile Sticky Bottom Menu End-->
             </div>
         </div>
+        <!-- Desktop Menu Items Start-->
         <div class="navbar-menu-items">
             <div class="container">
                 <div class="nav-bar">
@@ -154,12 +153,12 @@
                                     Categories <i class="fas fa-caret-down ms-1"></i>
                                 </button>
                                 <ul class="dropdown-menu-custom" id="categoryDropdown">
-                                    <li><a class="dropdown-item" href="#">Men’s Shoes</a></li>
-                                    <li><a class="dropdown-item" href="#">Women’s Shoes</a></li>
-                                    <li><a class="dropdown-item" href="#">Kids’ Shoes</a></li>
-                                    <li><a class="dropdown-item" href="#">Sneakers</a></li>
-                                    <li><a class="dropdown-item" href="#">Boots</a></li>
-                                    <li><a class="dropdown-item" href="#">Sports Shoes</a></li>
+                                    <li><a class="dropdown-item" href="shop.html">Men’s Shoes</a></li>
+                                    <li><a class="dropdown-item" href="shop.html">Women’s Shoes</a></li>
+                                    <li><a class="dropdown-item" href="shop.html">Kids’ Shoes</a></li>
+                                    <li><a class="dropdown-item" href="shop.html">Sneakers</a></li>
+                                    <li><a class="dropdown-item" href="shop.html">Boots</a></li>
+                                    <li><a class="dropdown-item" href="shop.html">Sports Shoes</a></li>
                                 </ul>
                             </li>
 
@@ -177,43 +176,37 @@
                 </div>
             </div>
         </div>
+        <!-- ------------Mobile Menu--------------- -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-close" onclick="toggleMobileNav()">×</div>
 
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
 
+            <!-- Categories Toggle -->
+            <button class="mobile-categories-toggle" onclick="toggleMobileCategories()">
+                Categories <i class="fas fa-angle-down"></i>
+            </button>
+
+            <!-- Dropdown Items -->
+            <div id="mobileCategoriesDropdown" class="mobile-categories-dropdown">
+                <a href="#">Men’s Shoes</a>
+                <a href="#">Women’s Shoes</a>
+                <a href="#">Kids’ Shoes</a>
+                <a href="#">Sneakers</a>
+                <a href="#">Boots</a>
+                <a href="#">Sports Shoes</a>
+            </div>
+
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </header>
 
-    <div class="mobile-nav" id="mobileNav">
-        <div class="mobile-close" onclick="toggleMobileNav()">×</div>
+    <!---------------- Header End---------------->
 
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-
-        <!-- ✅ Categories Toggle -->
-        <button class="mobile-categories-toggle" onclick="toggleMobileCategories()">
-            Categories <i class="fas fa-angle-down"></i>
-        </button>
-
-        <!-- ✅ Dropdown Items -->
-        <div id="mobileCategoriesDropdown" class="mobile-categories-dropdown">
-            <a href="#">Men’s Shoes</a>
-            <a href="#">Women’s Shoes</a>
-            <a href="#">Kids’ Shoes</a>
-            <a href="#">Sneakers</a>
-            <a href="#">Boots</a>
-            <a href="#">Sports Shoes</a>
-        </div>
-
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
-
-
-
-
-    <!-- ======= HEADER END ======= -->
-
-    <!-- ======= MAIN CONTENT START ======= -->
+    <!------------ Main Content Start ------------>
     <main>
         <!-- Contact Section Start -->
         <section class="contact-section">
@@ -293,9 +286,9 @@
             </div>
         </section>
     </main>
-    <!-- ======= MAIN CONTENT END ======= -->
+    <!------------ Main Content End ------------>
 
-    <!-- ======= FOOTER START ======= -->
+    <!------------------ Footer Start ----------------->
     <footer class="footer-section pt-5">
         <div class="footer-logo-area">
             <div class="container">
@@ -339,9 +332,6 @@
                                         marcofootwearbd@gmail.com
                                     </li>
                                 </ul>
-                                <!-- <a href="#" class="btn btn-sm btn-outline-light">
-                                    <i class="fas fa-directions me-1"></i> Get direction
-                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -353,11 +343,10 @@
                                 our company.
                                 We
                                 promise not to spam your inbox.</p>
-                            <div class="input-group mb-3">
+                            <div class="input-group subscriber-input mb-3">
                                 <input type="text" class="form-control form-control-sm"
                                     placeholder="Enter your mobile number..." aria-label="Mobile">
-                                <button class="btn btn-sm text-white" type="button"
-                                    style="background: linear-gradient(45deg, #ff6b9d, #ffb347);">
+                                <button class="btn btn-sm text-white" type="button">
                                     <i class="fas fa-paper-plane"></i>
                                 </button>
                             </div>
@@ -401,20 +390,22 @@
         <hr class="my-1" style="border-color: rgba(255,255,255,0.1);">
 
         <!-- Copyright -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-start">
-                    <p class="small mb-0"> &copy; 2025 by <span class="text-primary">Marco Footwear</span>. All Rights
-                        Reserved.</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <p class="small mb-0">Developed By <a href="https://www.freelanceit.com.bd/" class="developed-link"
-                            target="_blank">Freelance IT</a></p>
+        <div class="copy-right-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <p class="small"> &copy; 2025 by <span class="text-primary">Marco Footwear</span>. All Rights
+                            Reserved.</p>
+                    </div>
+                    <div class="col-md-6 developer-text text-end">
+                        <p class="small mb-0">Developed By <a href="https://www.freelanceit.com.bd/"
+                                class="developed-link" target="_blank">Freelance IT</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- ======= FOOTER END ======= -->
+    <!---------------------- Footer End ---------------->
 
     <!-- Bootstrap JS & Custom JS -->
     <script src="js/bootstrap.bundle.min.js"></script>

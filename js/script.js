@@ -1,3 +1,5 @@
+// Add Qunatity input item to Add to Cart
+
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".product-card");
 
