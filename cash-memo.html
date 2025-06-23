@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marco Footwear Cash Memo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f1f1f1;
+        }
+
+        .memo-container {
+            background: #fff;
+            width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border-bottom: 3px solid #0a4a8e; */
+            /* padding-bottom: 10px; */
+        }
+
+        .header-address {
+            background-color: #0154A6;
+            color: #fff;
+            /* padding: 3px 0; */
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .header-address p {
+            margin-bottom: 0;
+            padding: 5px 0;
+        }
+
+        .header-left {
+            width: 50%;
+        }
+
+        .header-left img {
+            height: 60px;
+        }
+
+        .header-center {
+            /* background-color: #ddd; */
+            width: 30%;
+        }
+
+        .header-center h1 {
+            color: #d80000;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .owner-header {
+            background-color: #064E38;
+            padding: 8px 50px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .owner-header {
+            color: #fff;
+            font-size: 17px;
+        }
+
+        .header-center p {
+            font-size: 14px;
+            margin: 2px 0;
+            color: #003366;
+        }
+
+        .owners {
+            font-size: 14px;
+        }
+
+        .single-owner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: #ddd;
+            margin-bottom: 5px;
+            padding: 5px 10px;
+        }
+
+        .single-owner:nth-child(1) {
+            background: linear-gradient(135deg, #CDC5DB, #fff);
+        }
+
+        .single-owner:nth-child(2) {
+            background: linear-gradient(135deg, #D4B34E, #fff);
+        }
+
+        .single-owner:nth-child(3) {
+            background: linear-gradient(135deg, #80B65E, #fff);
+        }
+
+        .single-owner ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .date-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .date-wrapper span {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .date-box {
+            width: 60px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .date-box:nth-child(2) {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            /* Date - pink */
+        }
+
+        .date-box:nth-child(3) {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            /* Month - blue */
+        }
+
+        .date-box:nth-child(4) {
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+            /* Year - green */
+        }
+
+        .name-address {
+            max-width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .name-address div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .name-address button {
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 9px 16px;
+            border-radius: 3px;
+            cursor: default;
+            min-width: 80px;
+            text-align: left;
+        }
+
+        /* Button colors */
+        .name-address div:nth-child(1) button {
+            background-color: #0181D0;
+            /* Blue */
+        }
+
+        .name-address div:nth-child(2) button {
+            background-color: #007958;
+            /* Green */
+        }
+
+        .name-address input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Input gradients */
+        .name-address div:nth-child(1) input {
+            background: linear-gradient(135deg, #79C7EE, #ffffff);
+            /* Blue to white */
+        }
+
+        .name-address div:nth-child(2) input {
+            background: linear-gradient(135deg, #ABD3B0, #ffffff);
+            /* Green to white */
+        }
+
+        /* Optional: add subtle box-shadow */
+        .name-address input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #666;
+        }
+
+        th {
+            background: #cfe2f3;
+        }
+
+        thead th:nth-child(1) {
+            background: linear-gradient(135deg, #DCA85D, #cea469);
+        }
+
+        thead th:nth-child(2) {
+            background: linear-gradient(135deg, #DAAB65, #edeaee);
+        }
+
+        thead th:nth-child(3) {
+            background: linear-gradient(135deg, #6ec3ee, #e9f5fa);
+        }
+
+        thead th:nth-child(4) {
+            background: linear-gradient(135deg, #6ec3ee, #92c6e0);
+        }
+
+        thead th:nth-child(5) {
+            background: linear-gradient(135deg, #7DA753, rgb(140, 192, 147));
+        }
+
+        th,
+        td {
+            padding: 6px 8px;
+            text-align: center;
+        }
+
+        .first-td {
+            color: #000;
+            font-weight: bold;
+        }
+
+
+        .totals {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .footer img {
+            height: 18px;
+            vertical-align: middle;
+        }
+
+        /* ====== */
+        .summary-row td {
+            background: #f9f9f9;
+            font-weight: bold;
+        }
+
+        .no-border {
+            border: none !important;
+            background: transparent !important;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="memo-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="assets/images/logo/logo-top.png" alt="Marco Logo" />
+            </div>
+            <div class="header-center">
+                <div class="owner-name-header">
+                    <h3 class="owner-header">Owners</h3>
+                </div>
+                <div class="owners">
+                    <div class="single-owner">
+                        <span><strong>Sorif Islam</strong> </span>
+                        <ul>
+                            <li>📞 01616 853902</li>
+                        </ul>
+                    </div>
+                    <div class="single-owner">
+                        <span><strong>Saroar Hossain</strong></span>
+                        <ul>
+                            <li>📞 01711 657743</li>
+                        </ul>
+                    </div>
+                    <div class="single-owner">
+                        <span><strong>Milon Talukdher</strong></span>
+                        <ul>
+                            <li>📞 01744 257246</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <h1>MARCO FOOTWEAR</h1>
+                <p>১নং মহাজান রোড, নিউ মডার্ন পাবলিক স্কুলের বিপরীতে, ময়মনসিংহ।</p> -->
+            </div>
+        </div>
+        <div class="header-address">
+            <p>১নং মহাজান রোড, নিউ মডার্ন পাবলিক স্কুলের বিপরীতে, ময়মনসিংহ।</p>
+        </div>
+
+
+
+        <div class="info">
+            <div>ক্রমিক নং: <strong>001</strong></div>
+            <div class="date-wrapper">
+                <span>তারিখ:</span>
+                <div class="date-box">___</div>
+                <div class="date-box">___</div>
+                <div class="date-box">___</div>
+            </div>
+        </div>
+        <div class="name-address">
+            <div>
+                <button>নাম:</button>
+                <input type="text" placeholder="আপনার নাম লিখুন">
+            </div>
+            <div>
+                <button>ঠিকানা:</button>
+                <input type="text" placeholder="আপনার ঠিকানা লিখুন">
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ক্রম</th>
+                    <th>বিবরণ</th>
+                    <th>পরিমাণ</th>
+                    <th>দর</th>
+                    <th>টাকা</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+                <tr>
+                    <td>1</td>
+                    <td>1316 = BL + AS</td>
+                    <td>12</td>
+                    <td>315</td>
+                    <td>3780</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1314 = BL, BL</td>
+                    <td>12</td>
+                    <td>315</td>
+                    <td>3780</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>P1-2 = GL, AS</td>
+                    <td>12</td>
+                    <td>300</td>
+                    <td>3600</td>
+                </tr>
+                <!-- <tr>
+                    <td>4</td>
+                    <td>A-7 = BL, BK</td>
+                    <td>12</td>
+                    <td>295</td>
+                    <td>3540</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>308 = OR</td>
+                    <td>12</td>
+                    <td>290</td>
+                    <td>3480</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>A-01 = BL, BK</td>
+                    <td>12</td>
+                    <td>275</td>
+                    <td>3300</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>301 = BL</td>
+                    <td>6</td>
+                    <td>275</td>
+                    <td>1650</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>A-5 = AS</td>
+                    <td>6</td>
+                    <td>290</td>
+                    <td>1740</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>211 = TA, BK</td>
+                    <td>12</td>
+                    <td>285</td>
+                    <td>3420</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>1312 = BK</td>
+                    <td>6</td>
+                    <td>315</td>
+                    <td>1890</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>2-5 = BL</td>
+                    <td>6</td>
+                    <td>315</td>
+                    <td>1890</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>312 = CK, BK</td>
+                    <td>12</td>
+                    <td>285</td>
+                    <td>3420</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>711 = CK, BK</td>
+                    <td>12</td>
+                    <td>285</td>
+                    <td>3420</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>602 = AS, BK</td>
+                    <td>12</td>
+                    <td>285</td>
+                    <td>3420</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>602 = SK, OM</td>
+                    <td>12</td>
+                    <td>285</td>
+                    <td>3420</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>605 = PI, CK</td>
+                    <td>12</td>
+                    <td>285</td>
+                    <td>3420</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>626 = PI, CK, BK</td>
+                    <td>18</td>
+                    <td>285</td>
+                    <td>5130</td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+                <!-- Add empty rows with custom text and totals -->
+                <!-- <tr class="">
+                    <td class="no-border text-left">Taka (sentence): Lorem ipsum dolor sit amet.</td>
+
+                </tr>
+
+                <tr class="summary-row">
+                    <td colspan="4" class="no-border text-right"><strong>Total</strong></td>
+                    <td><strong>123,456</strong></td>
+                </tr>
+                <tr class="summary-row">
+                    <td colspan="4" class="no-border text-right"><strong>Due</strong></td>
+                    <td><strong>12,345</strong></td>
+                </tr>
+                <tr class="summary-row">
+                    <td colspan="4" class="no-border text-right"><strong>Next Payment</strong></td>
+                    <td><strong>15,000</strong></td>
+                </tr> -->
+            </tbody>
+        </table>
+
+        <div class="totals">
+            মোট = <span style="color:green;">54,720</span> টাকা<br />
+            জুতা জোড়া: 186
+        </div>
+
+        <div class="footer">
+            <p>📞 01616 853902 | ✉️ marcofootwearbd@gmail.com</p>
+            <p>📘 Facebook: Marco Footwearbd</p>
+            <p>ধন্যবাদ আবার আসবেন 🇧🇩</p>
+        </div>
+    </div>
+
+
+    <!-- <script>
+        function hexToRgb(hex) {
+            const bigint = parseInt(hex.replace("#", ""), 16);
+            return {
+                r: (bigint >> 16) & 255,
+                g: (bigint >> 8) & 255,
+                b: bigint & 255
+            };
+        }
+
+        function rgbToHex({ r, g, b }) {
+            return "#" + [r, g, b].map(x =>
+                x.toString(16).padStart(2, "0")
+            ).join("");
+        }
+
+        function interpolateColor(color1, color2, factor) {
+            const c1 = hexToRgb(color1);
+            const c2 = hexToRgb(color2);
+            const result = {
+                r: Math.round(c1.r + factor * (c2.r - c1.r)),
+                g: Math.round(c1.g + factor * (c2.g - c1.g)),
+                b: Math.round(c1.b + factor * (c2.b - c1.b))
+            };
+            return rgbToHex(result);
+        }
+
+        const table = document.getElementById("data-table");
+        const rows = table.querySelectorAll("tr");
+
+        const startColor = "#FFFFFF";
+        const endColor = "#B1D1AC";
+
+        rows.forEach((row, index) => {
+            const td = row.querySelector("td:first-child");
+            if (td) {
+                const factor = index / (rows.length - 1 || 1); // Prevent divide by 0
+                const bgColor = interpolateColor(startColor, endColor, factor);
+                td.classList.add("first-td");
+                td.style.background = bgColor;
+            }
+        });
+    </script> -->
+    <!-- <script>
+        function hexToRgb(hex) {
+            const bigint = parseInt(hex.replace("#", ""), 16);
+            return {
+                r: (bigint >> 16) & 255,
+                g: (bigint >> 8) & 255,
+                b: bigint & 255
+            };
+        }
+
+        function rgbToHex({ r, g, b }) {
+            return "#" + [r, g, b].map(x =>
+                x.toString(16).padStart(2, "0")
+            ).join("");
+        }
+
+        function interpolateColor(color1, color2, factor) {
+            const c1 = hexToRgb(color1);
+            const c2 = hexToRgb(color2);
+            const result = {
+                r: Math.round(c1.r + factor * (c2.r - c1.r)),
+                g: Math.round(c1.g + factor * (c2.g - c1.g)),
+                b: Math.round(c1.b + factor * (c2.b - c1.b))
+            };
+            return rgbToHex(result);
+        }
+
+        const table = document.getElementById("data-table");
+        const rows = Array.from(table.querySelectorAll("tr"));
+
+        const startColor = "#FFF5D1";
+        const endColor = "#B1D1AC";
+
+        const groupSize = 4; // Number of rows per color group
+
+        const totalGroups = Math.ceil(rows.length / groupSize);
+
+        for (let i = 0; i < rows.length; i++) {
+            const groupIndex = Math.floor(i / groupSize);
+            const factor = groupIndex / (totalGroups - 1 || 1); // Avoid division by zero
+            const bgColor = interpolateColor(startColor, endColor, factor);
+
+            const tds = rows[i].querySelectorAll("td");
+            tds.forEach(td => {
+                td.style.background = bgColor;
+            });
+        }
+    </script> -->
+
+    <script>
+        function hexToRgb(hex) {
+            const bigint = parseInt(hex.replace("#", ""), 16);
+            return {
+                r: (bigint >> 16) & 255,
+                g: (bigint >> 8) & 255,
+                b: bigint & 255
+            };
+        }
+
+        function rgbToHex({ r, g, b }) {
+            return "#" + [r, g, b].map(x =>
+                x.toString(16).padStart(2, "0")
+            ).join("");
+        }
+
+        function interpolateColor(color1, color2, factor) {
+            const c1 = hexToRgb(color1);
+            const c2 = hexToRgb(color2);
+            const result = {
+                r: Math.round(c1.r + factor * (c2.r - c1.r)),
+                g: Math.round(c1.g + factor * (c2.g - c1.g)),
+                b: Math.round(c1.b + factor * (c2.b - c1.b))
+            };
+            return rgbToHex(result);
+        }
+
+        const table = document.getElementById("data-table");
+        const rows = Array.from(table.querySelectorAll("tr"));
+
+        // Define different color pairs for each column (startColor, endColor)
+        const columnGradients = [
+            ["#FFD3B6", "#FFAAA5"], // Column 0: peach to light red
+            ["#D0E6A5", "#86E3CE"], // Column 1: light green to aqua
+            ["#FFFFFF", "#419CD1"], // Column 2: mint to light lime
+            ["#AFCBFF", "#FFFFFF"], // Column 3: sky blue tones
+            ["#FFECB3", "#FFE0B2"]  // Column 4: light yellow/orange
+        ];
+
+        const totalRows = rows.length;
+
+        rows.forEach((row, rowIndex) => {
+            const tds = row.querySelectorAll("td");
+            tds.forEach((td, colIndex) => {
+                if (columnGradients[colIndex]) {
+                    const [startColor, endColor] = columnGradients[colIndex];
+                    const factor = rowIndex / (totalRows - 1 || 1); // scale gradient by row
+                    const bgColor = interpolateColor(startColor, endColor, factor);
+                    td.style.background = bgColor;
+                }
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
